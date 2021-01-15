@@ -1,0 +1,27 @@
+// colors
+$accent: #fcd7b6;
+$light-accent: #fef7f0;
+$medium-accent: #feefe2;
+$dark-title: #1a1a1a;
+$blue-title: #243f4d;
+$light-blue: #a3bbc8;
+$dark-blue: #436372;
+
+// fonts 
+%rubik-500 {
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%DMSans-500 {
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 500;
+}
+
+
+
+%background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
