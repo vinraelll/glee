@@ -9,6 +9,11 @@
   }
 }
 
+.logo {
+  width: 100%;
+  max-width: 215px;
+}
+
 .nav {
   &__menu {
     display: flex;
@@ -22,7 +27,7 @@
   }
 
   &__link {
-    @extend %rubik-500;
+    @extend %DMSans-500;
     font-size: 15px;
     line-height: 1;
     color: $dark-blue;
@@ -105,7 +110,7 @@
 .user-nav__link--zoom::after {
   top: 17px;
   left: 18px;
-  width: 15px;
+  width: 16px;
   height: 16px;
   background-image: url('../images/icons/zoom-icon.svg');
 }
@@ -136,8 +141,9 @@
   border-radius: 50%;
   @extend %DMSans-500;
   font-size: 10px;
-  line-height: 1.6;
+  line-height: 1.7;
   text-align: center;
+  color: $dark-title;
   background-color: #fff;
   z-index: 10;
 }
