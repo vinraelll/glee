@@ -1,0 +1,94 @@
+.hero-screen {
+  margin-bottom: 70px;
+}
+
+.slide {
+  background-color: $accent;
+  background-position: 84% 43%;
+  background-repeat: no-repeat;
+  background-image: url('../../images/hero-bg.png');
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
+    margin: 0px auto;
+    padding: 230px 0 280px;
+  }
+
+  &__inner {
+    min-width: 420px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $blue-title;
+  }
+
+  &__subtitle {
+    max-width: 340px;
+    margin-bottom: 40px;
+    @extend %rubik-500;
+    // тут рубик 400
+    font-size: 18px;
+    line-height: 1.8;
+    color: $dark-blue;
+  }
+
+  &__link {
+    display: block;
+    max-width: 200px;
+    padding: 20px 25px;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 1;
+    color: #fff;
+    background-color: $light-blue;
+  }
+}
+
+.advantages {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+
+    padding: 47px 0;
+    background-color: $light-accent;
+  }
+
+  &__item:not(:last-child) {
+    border-right: 1px solid #e8e4df;
+  }
+
+  &__descr {
+    padding-left: 90px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    @extend %DMSans-500;
+    font-weight: 700;
+    // тут дм санс 700
+    font-size: 18px;
+  }
+
+  &__subtitle {
+    max-width: 200px;
+    @extend %DMSans-500; 
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 400;
+    // тут дм санс 400
+  }
+
+}
