@@ -1,0 +1,11 @@
+.new-design {
+  margin-bottom: 100px;
+
+  &__title {
+    max-width: max-content;
+    margin: 0px auto 40px;
+    @extend %DMSans-700;
+    font-size: 36px;
+    color: #191919;
+  }
+}
