@@ -4,16 +4,16 @@
 
 .slide {
   background-color: $accent;
-  background-position: 84% 43%;
+  background-position: 84% 41%;
   background-repeat: no-repeat;
   background-image: url('../../images/hero-bg.png');
 
-  &__item {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     max-width: 1160px;
     margin: 0px auto;
-    padding: 230px 0 280px;
+    padding: 250px 0px;
   }
 
   &__inner {
@@ -32,14 +32,14 @@
   &__subtitle {
     max-width: 340px;
     margin-bottom: 40px;
-    @extend %rubik-500;
-    // тут рубик 400
+    @extend %rubik-400;
     font-size: 18px;
     line-height: 1.8;
     color: $dark-blue;
   }
 
   &__link {
+    position: relative;
     display: block;
     max-width: 200px;
     padding: 20px 25px;
@@ -49,6 +49,46 @@
     color: #fff;
     background-color: $light-blue;
   }
+
+  &__link::after {
+    content: "";
+    width: 22px;
+    height: 9px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-image: url('../../images/icons/slider-link-arrow.svg');
+  }
+}
+
+ul.slick-dots {
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.slick-dots li:not(:last-child) {
+  margin-right: 12px;
+}
+
+.slick-dots button {
+  width: 30px;
+  height: 30px;
+  @extend %rubik-500;
+  font-size: 11px;
+  color: #667983;
+  border: none;
+  border-radius: 50%;
+  background-color: #fde3cc;
+  cursor: pointer;
+  transition: background-color, color, 0.4s ease-out;
+}
+
+.slick-active button,
+.slick-dots button:hover {
+  color: $blue-title;
+  background-color: #fff;
 }
 
 .advantages {
@@ -61,7 +101,6 @@
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-
     padding: 47px 0;
     background-color: $light-accent;
   }
@@ -71,24 +110,46 @@
   }
 
   &__descr {
+    position: relative;
     padding-left: 90px;
   }
 
   &__title {
     margin-bottom: 8px;
-    @extend %DMSans-500;
-    font-weight: 700;
-    // тут дм санс 700
+    @extend %DMSans-700;
     font-size: 18px;
   }
 
   &__subtitle {
     max-width: 200px;
-    @extend %DMSans-500; 
+    @extend %DMSans-400; 
     font-size: 16px;
     line-height: 2;
-    font-weight: 400;
-    // тут дм санс 400
+    color: #585858;
   }
+}
 
+.advantages__descr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 54px;
+  height: 54px;
+  @extend %background;
+}
+
+.advantages__descr--support::before {
+  height: 56px;
+  background-image: url('../../images/icons/support-icon.png');
+}
+
+.advantages__descr--delivery::before {
+  width: 54px;
+  height: 37px;
+  background-image: url('../../images/icons/delivery-icon.png');
+}
+
+.advantages__descr--payment::before {
+  background-image: url('../../images/icons/payment-icon.png');
 }

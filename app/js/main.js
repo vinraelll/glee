@@ -1,5 +1,9 @@
-// $(function() {
-//   $('.hero-screen__slider').slick({
+$(document).ready(function() {
+
+  $('.slide').slick({
+    arrows: false,
+    dots: true,
     
-//   })
-// })
+  })
+
+})

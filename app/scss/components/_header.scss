@@ -11,7 +11,7 @@
 
 .logo {
   width: 100%;
-  max-width: 215px;
+  max-width: 290px;
 }
 
 .nav {
@@ -27,10 +27,15 @@
   }
 
   &__link {
-    @extend %DMSans-500;
+    @extend %DMSans-700;
     font-size: 15px;
     line-height: 1;
     color: $dark-blue;
+    transition: color 0.4s ease-out;
+  }
+
+  &__link--active, .nav__link:hover {
+    color: $dark-title;
   }
 
 }
