@@ -8,4 +8,39 @@
     font-size: 36px;
     color: #191919;
   }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 525px;
+    border: 1px solid red;
+  }
+}
+
+.new-design__item {
+  flex-grow: 1;
+  max-width: 370px;
+  max-height: 246px;
+  padding: 40px 5px 5px 35px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+
+  &-title {
+    max-width: 175px;
+    @extend %DMSans-700;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  &-type {
+    @extend %DMSans-700;
+    font-size: 16px;
+    color: $light-blue;
+  }
+
+  &-img {
+    transform: translateX(7px) translateY(-100px);
+  }
 }

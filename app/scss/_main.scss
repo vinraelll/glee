@@ -1,3 +1,11 @@
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
 .container--max {
   max-width: 1790px;
   padding: 0px 10px;
