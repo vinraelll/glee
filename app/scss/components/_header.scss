@@ -7,6 +7,13 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1135px;
+    flex-grow: 1;
+  }
 }
 
 .logo {
@@ -34,13 +41,13 @@
     transition: color 0.4s ease-out;
   }
 
-  &__link--active, .nav__link:hover {
-    color: $dark-title;
-  }
+  // &.active, .nav__link:hover {
+  //   // color: $dark-title;
 
+  // }
 }
 
-.user-nav {
+.controls {
   display: flex;
   justify-content: space-between;
   max-width: 320px;
@@ -70,94 +77,173 @@
       background-image: url('../images/icons/hr-line.svg');
     }
   }
+
+  &__link {
+    position: relative;
+  }
+
+  &__link--search,
+  &__link--tel {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__link--search {
+    background-color: #edf1f4;
+  }
+
+  &__link--tel {
+    background-color: #a3bbc8;
+  }
+
+  &__link--heart,
+  &__link--cart {
+    top: -8px;
+  }
+
+  &__link--search::after,
+  &__link--heart::after,
+  &__link--cart::after,
+  &__link--tel::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    @extend %background;
+    background-size: auto;
+  }
+
+  &__link--tel::after {
+    background-image: url('../images/icons/dots.svg');
+  }
+
+  &__link--search::after {
+    @extend %background;
+    background-image: url('../images/icons/zoom-icon.svg');
+  }
+
+  &__link--heart::after {
+    left: -8px;
+    top: -8px;
+    background-image: url('../images/icons/heart-icon.svg');
+  }
+
+  &__link--cart::after {
+    top: -8px;
+    transform: translateX(-100%);
+    background-image: url('../images/icons/cart-icon.svg');
+  }
+
+  &__span {
+    position: absolute;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    @extend %DMSans-500;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+    color: $dark-title;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  &__link--heart span {
+    left: 11px;
+  }
+
+  &__link--cart span {
+    left: -7px;
+  }
 }
 
-.user-nav__link {
+/* NAVIGATION */
+
+// nav ul li {
+//   display: inline-block;
+// }
+
+.nav__link {
+  display: block;
+  padding: 15px;
+  margin: 0 10px;
+}
+
+.nav__link,
+.nav__link:after,
+.nav__link:before {
+  transition: all 0.4s ease-out;
+}
+
+.nav__link:hover {
+  color: #555;
+}
+
+.nav__link {
   position: relative;
 }
 
-.user-nav__link--zoom, 
-.user-nav__link--tel {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.user-nav__link--zoom {
-  background-color: #edf1f4;
-}
-
-.user-nav__link--tel {
-  background-color: #a3bbc8;
-}
-
-.user-nav__link--heart,
-.user-nav__link--cart {
-  top: -8px;
-}
-
-.user-nav__link--zoom::after,
-.user-nav__link--heart::after,
-.user-nav__link--cart::after,
-.user-nav__link--tel::after {
-  content: "";
+.nav__link:after {
   position: absolute;
-  @extend %background;
-}
-
-.user-nav__link--tel::after {
-  width: 20px;
-  height: 20px;
-  top: 15px;
-  left: 15px;
-}
-
-.user-nav__link--zoom::after {
-  top: 17px;
-  left: 18px;
-  width: 16px;
-  height: 16px;
-  background-image: url('../images/icons/zoom-icon.svg');
-}
-
-.user-nav__link--tel::after {
-  background-image: url('../images/icons/dots.svg');
-}
-
-.user-nav__link--heart::after {
-  width: 18px;
-  height: 16px;
+  bottom: 0;
   left: 0;
-  background-image: url('../images/icons/heart-icon.svg');
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
 }
 
-.user-nav__link--cart::after {
-  width: 19px;
-  height: 17px;
-  transform: translateX(-100%); 
-  background-image: url('../images/icons/cart-icon.svg');
+.nav__link:hover:after {
+  width: 100%;
 }
 
-.user-nav__span {
-  position: absolute;
-  top: -8px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  @extend %DMSans-500;
-  font-size: 10px;
-  line-height: 1.7;
-  text-align: center;
-  color: $dark-title;
-  background-color: #fff;
-  z-index: 10;
+.nav__link {
+  transition: all 2s;
+}
+.nav__link:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
 }
 
-.user-nav__link--heart span {
-  left: 11px;
-
+.nav__link:hover {
+  color: #fff;
+  z-index: 1;
 }
 
-.user-nav__link--cart span {
-  left: -7px;
+.nav__link:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  opacity: 1;
 }
+
+/* Keyframes */
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+
+  
+

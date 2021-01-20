@@ -16,17 +16,18 @@
 <body>
 
   <header class="header">
-    <div class="container--max">
+    <div class="container container--lg">
       <div class="header__inner">
 
-        <div class="logo">
-          <img class="logo__img" src="images/main-logo.png" alt="main logo">
-        </div>
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/main-logo.png" alt="main logo of internet store glee, style blue letters on pink background">
+        </a>
 
         <nav class="header__nav nav">
+
           <ul class="nav__menu">
             <li class="nav__item">
-              <a class="nav__link nav__link--active" href="#">
+              <a class="nav__link active" href="#">
                 Home +
               </a>
             </li>
@@ -56,20 +57,24 @@
               </a>
             </li>
           </ul>
-        </nav>
 
-        <nav class="user-nav">
-          <a class="user-nav__link user-nav__link--zoom" href="#"></a>
-          <div class="user-nav__inner">
-            <a href="#" class="user-nav__link user-nav__link--heart">
-              <span class="user-nav__span">0</span>
-            </a>
-            <a href="#" class="user-nav__link user-nav__link--cart">
-              <span class="user-nav__span">0</span>
-            </a>
+          <div class="header__controls controls">
+
+            <a class="controls__link controls__link--search" href="#"></a>
+            <div class="controls__inner">
+              <a href="#" class="controls__link controls__link--heart">
+                <span class="controls__span">0</span>
+              </a>
+              <a href="#" class="controls__link controls__link--cart">
+                <span class="controls__span">0</span>
+              </a>
+            </div>
+            <a href="#" class="controls__link controls__link--tel"></a>
+
           </div>
-          <a href="#" class="user-nav__link user-nav__link--tel"></a>
+
         </nav>
+ 
       </div>
     </div>
   </header>
@@ -77,7 +82,7 @@
   <main class="main">
 
     <section class="hero-screen advantages">
-      <div class="container--max">
+      <div class="container container--lg">
         <div class="hero-screen__inner">
           <div class="hero-screen__slider slide">
 
@@ -664,7 +669,7 @@
         </div>
       </div>
 
-      <div class="container--max">
+      <div class="container container--lg">
         <div class="bestseller__products">
 
           <div class="bestseller__products-item">
@@ -751,7 +756,7 @@
             <p class="new-design__item-type">
               Classic
             </p>
-            <img class="new-design__item-img" src="images/products/product-11.png" alt="product photo">
+            <img class="new-design__item-img" src="images/products/product-12.png" alt="product photo">
           </div>
 
           <div class="new-design__item">
@@ -761,7 +766,7 @@
             <p class="new-design__item-type">
               Classic
             </p>
-            <img class="new-design__item-img" src="images/products/product-11.png" alt="product photo">
+            <img class="new-design__item-img" src="images/products/product-13.png" alt="product photo">
           </div>
 
           <div class="new-design__item">
@@ -771,7 +776,7 @@
             <p class="new-design__item-type">
               Classic
             </p>
-            <img class="new-design__item-img" src="images/products/product-11.png" alt="product photo">
+            <img class="new-design__item-img" src="images/products/product-14.png" alt="product photo">
           </div>
 
           <div class="new-design__item">
@@ -781,7 +786,7 @@
             <p class="new-design__item-type">
               Classic
             </p>
-            <img class="new-design__item-img" src="images/products/product-11.png" alt="product photo">
+            <img class="new-design__item-img" src="images/products/product-15.png" alt="product photo">
           </div>
 
           <div class="new-design__item">
@@ -791,7 +796,7 @@
             <p class="new-design__item-type">
               Classic
             </p>
-            <img class="new-design__item-img" src="images/products/product-11.png" alt="product photo">
+            <img class="new-design__item-img" src="images/products/product-16.png" alt="product photo">
           </div>
 
         </div>
@@ -806,9 +811,9 @@
       <div class="footer__content">
 
         <div class="footer__contacts">
-          <div class="logo">
-            <img class="logo__img" src="images/main-logo.png" alt="main logo">
-          </div>
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/main-logo.png" alt="main logo of internet store glee, style blue letters on pink background">
+          </a>
           <address class="footer__address">
             ADDRESS: 4772 Wines Lane Houston, TX 77032
           </address>
@@ -885,7 +890,7 @@
           </p>
           <form class="news__form">
             <input class="news__input" type="email" placeholder="Email address" required>
-            <button class="news__btn" type="submit">Subscribe</button>
+            <button class="news__btn reset-btn" type="submit">Subscribe</button>
           </form>
         </div>
 
