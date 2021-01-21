@@ -17,19 +17,29 @@
 
   <header class="header">
     <div class="container container--lg">
-      <div class="header__inner">
-
-        <a class="logo" href="#">
-          <img class="logo__img" src="images/main-logo.png" alt="main logo of internet store glee, style blue letters on pink background">
-        </a>
 
         <nav class="header__nav nav">
+
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/main-logo.png" alt="main logo of internet store glee, style blue letters on pink background">
+          </a>
 
           <ul class="nav__menu">
             <li class="nav__item">
               <a class="nav__link active" href="#">
                 Home +
               </a>
+              <ul class="nav__dropdown dropdown">
+                <li class="dropdown__item">
+                  <a class="dropdown__link"href="#">Зае**ла</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link"href="#">Бл**дская</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link"href="#">Анимация</a>
+                </li>
+              </ul>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">
@@ -45,6 +55,20 @@
               <a class="nav__link" href="#">
                 Pages +
               </a>
+              <ul class="nav__dropdown dropdown">
+                <li class="dropdown__item">
+                  <a class="dropdown__link"href="#">Пол 4 утра</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link"href="#">Спать на**уй</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link"href="#">А ты сидишь х**ришь</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link"href="#">Крик души, ей богу</a>
+                </li>
+              </ul>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">
@@ -74,78 +98,77 @@
           </div>
 
         </nav>
- 
-      </div>
+
     </div>
   </header>
 
   <main class="main">
 
-    <section class="hero-screen advantages">
+    <section class="hero">
       <div class="container container--lg">
-        <div class="hero-screen__inner">
-          <div class="hero-screen__slider slide">
+        <div class="hero__inner">
+          <div class="hero__slider slider">
 
-            <div class="slide__item">
-              <div class="slide__wrapper">
-                <div class="slide__inner">
-                  <a class="slide__descr" href="#">
-                    <h1 class="slide__title">
+            <div class="slider__item">
+              <div class="slider__wrapper">
+                <div class="slider__inner">
+                  <a class="slider__descr" href="#">
+                    <div class="slider__title">
                       Smart and trendy
-                    </h1>
-                    <p class="slide__subtitle">
+                    </div>
+                    <p class="slider__subtitle">
                       Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                     </p>
                   </a>
-                  <a class="slide__link" href="#">
+                  <a class="slider__link" href="#">
                     Shop Now
                   </a>
                 </div>
-                <img class="slide__img" src="images/slider-img.png" alt="sofa">
+                <img class="slider__img" src="images/slider-img.png" alt="big white sofa with two green pillows on figure legs with light shadow">
               </div>
             </div>
 
-            <div class="slide__item">
-              <div class="slide__wrapper">
-                <div class="slide__inner">
-                  <a class="slide__descr" href="#">
-                    <h1 class="slide__title">
+            <div class="slider__item">
+              <div class="slider__wrapper">
+                <div class="slider__inner">
+                  <a class="slider__descr" href="#">
+                    <div class="slider__title">
                       Smart and trendy
-                    </h1>
-                    <p class="slide__subtitle">
+                    </div>
+                    <p class="slider__subtitle">
                       Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                     </p>
                   </a>
-                  <a class="slide__link" href="#">
+                  <a class="slider__link" href="#">
                     Shop Now
                   </a>
                 </div>
-                <img class="slide__img" src="images/slider-img.png" alt="sofa">
+                <img class="slider__img" src="images/slider-img.png" alt="sofa">
               </div>
             </div>
 
-            <div class="slide__item">
-              <div class="slide__wrapper">
-                <div class="slide__inner">
-                  <a class="slide__descr" href="#">
-                    <h1 class="slide__title">
+            <div class="slider__item">
+              <div class="slider__wrapper">
+                <div class="slider__inner">
+                  <a class="slider__descr" href="#">
+                    <div class="slider__title">
                       Smart and trendy
-                    </h1>
-                    <p class="slide__subtitle">
+                    </div>
+                    <p class="slider__subtitle">
                       Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                     </p>
                   </a>
-                  <a class="slide__link" href="#">
+                  <a class="slider__link" href="#">
                     Shop Now
                   </a>
                 </div>
-                <img class="slide__img" src="images/slider-img.png" alt="sofa">
+                <img class="slider__img" src="images/slider-img.png" alt="sofa">
               </div>
             </div>
 
           </div>
 
-          <ul class="advantages__list">
+          <ul class="advantages">
 
             <li class="advantages__item">
               <div class="advantages__descr advantages__descr--support">
@@ -811,45 +834,47 @@
       <div class="footer__content">
 
         <div class="footer__contacts">
+
           <a class="logo" href="#">
             <img class="logo__img" src="images/main-logo.png" alt="main logo of internet store glee, style blue letters on pink background">
           </a>
-          <address class="footer__address">
+          <div class="footer__address">
             ADDRESS: 4772 Wines Lane Houston, TX 77032
-          </address>
-          <a class="footer__tel" href="tel:+8323475843">
-            Telephone: +832-347-5843
-          </a>
-          <a class="footer__email" href="mailto:" contact@Glee.com">
-            Email: contact@Glee.com
-          </a>
+          </div>
+          <div>
+            Telephone: <a class="footer__tel" href="tel:+8323475843">+832-347-5843</a>
+          </div>
+          <div>
+            Email: <a class="footer__email" href="mailto:contact@Glee.com">contact@Glee.com</a>
+          </div>
+          
         </div>
 
         <div class="footer__services service">
           <div class="footer__title">services</div>
           <ul class="servive__menu">
             <li class="service__item">
-              <a href="#" class="service__link">
+              <a class="service__link" href="#">
                 About us
               </a>
             </li>
             <li class="service__item">
-              <a href="#" class="service__link">
+              <a class="service__link" href="#">
                 Return Policy
               </a>
             </li>
             <li class="service__item">
-              <a href="#" class="service__link">
+              <a class="service__link" href="#">
                 Our Blog
               </a>
             </li>
             <li class="service__item">
-              <a href="#" class="service__link">
+              <a class="service__link" href="#">
                 Contact Us
               </a>
             </li>
             <li class="service__item">
-              <a href="#" class="service__link">
+              <a class="service__link" href="#">
                 Terms & Condition
               </a>
             </li>
@@ -858,28 +883,30 @@
 
         <div class="footer__account acc">
           <div class="footer__title">account</div>
+
           <ul class="acc__menu">
             <li class="acc__item">
-              <a href="#" class="acc__link">
+              <a class="acc__link" href="#">
                 Your Account
               </a>
             </li>
             <li class="acc__item">
-              <a href="#" class="acc__link">
+              <a class="acc__link" href="#">
                 Checkout
               </a>
             </li>
             <li class="acc__item">
-              <a href="#" class="acc__link">
+              <a class="acc__link" href="#">
                 Login
               </a>
             </li>
             <li class="acc__item">
-              <a href="#" class="acc__link">
+              <a class="acc__link" href="#">
                 Register
               </a>
             </li>
           </ul>
+
         </div>
 
         <div class="footer__newsletter news">
@@ -889,7 +916,9 @@
             update protidin.
           </p>
           <form class="news__form">
-            <input class="news__input" type="email" placeholder="Email address" required>
+            <label for="subscribe">
+              <input name="subscribe" class="news__input" type="email" placeholder="Email address" required>
+            </label>
             <button class="news__btn reset-btn" type="submit">Subscribe</button>
           </form>
         </div>

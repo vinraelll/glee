@@ -1,8 +1,8 @@
-.hero-screen {
+.hero {
   margin-bottom: 70px;
 }
 
-.slide {
+.slider {
   background-color: $accent;
   background-position: 84% 41%;
   background-repeat: no-repeat;
@@ -13,11 +13,15 @@
     justify-content: space-between;
     max-width: 1160px;
     margin: 0px auto;
-    padding: 250px 0px;
+    padding: 200px 0px;
   }
 
   &__inner {
     min-width: 420px;
+  }
+
+  &__descr {
+    outline: transparent;
   }
 
   &__title {
@@ -92,9 +96,7 @@ ul.slick-dots {
 }
 
 .advantages {
-  &__list {
-    display: flex;
-  }
+  display: flex;
 
   &__item {
     display: flex;

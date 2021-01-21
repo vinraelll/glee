@@ -1,19 +1,5 @@
 .header {
   padding: 50px 0px;
-
-  &__inner {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1135px;
-    flex-grow: 1;
-  }
 }
 
 .logo {
@@ -22,30 +8,104 @@
 }
 
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   &__menu {
     display: flex;
     justify-content: space-between;
   }
 
   &__item {
+    position: relative;
+
     &:not(:last-child) {
       margin-right: 30px;
+    }
+
+    &:hover .dropdown {
+        visibility: visible; 
+        opacity: 1;
+        transform: translateY(0%);
+        transition-delay: 0s, 0s, 0.3s;
+        background-color: $blue-title;
     }
   }
 
   &__link {
+    position: relative;
+    display: block;
+    padding: 15px;
+    margin: 0 10px;
     @extend %DMSans-700;
     font-size: 15px;
     line-height: 1;
     color: $dark-blue;
-    transition: color 0.4s ease-out;
+    transition: color 0.5s ease-out;
   }
 
-  // &.active, .nav__link:hover {
-  //   // color: $dark-title;
+  &__link.active {
+    color: #fff;
+    background-color: $blue-title;
+  }
 
-  // }
+  &__link:hover {
+    color: #fff;
+  }
+  
+  &__link:after {
+    content: ".";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    color: transparent;
+    height: 1px;
+  }
+  
+  &__link:hover:after {
+    z-index: -10;
+    animation: fill 0.5s forwards;
+    opacity: 1;
+  }
 }
+
+// ANIMATION 
+
+.dropdown {
+  position: absolute;
+  left: 10px;
+  width: 300px;
+  opacity: 0;
+  visibility: hidden; 
+  transform: translateY(-3em);
+  z-index: 2222;
+  transition: all 0.3s ease-in-out;
+
+  &__item {
+    position: relative;
+  }
+  
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    @extend %DMSans-700;
+    font-size: 15px;
+    color: #ddd;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  &__link:hover {
+    color: rgba(0,223,252,1);
+    background: rgba(0, 235, 252, 0.02);
+  }
+}
+
+// ANIMATION END
 
 .controls {
   display: flex;
@@ -161,71 +221,8 @@
   }
 }
 
-/* NAVIGATION */
-
-// nav ul li {
-//   display: inline-block;
-// }
-
-.nav__link {
-  display: block;
-  padding: 15px;
-  margin: 0 10px;
-}
-
-.nav__link,
-.nav__link:after,
-.nav__link:before {
-  transition: all 0.4s ease-out;
-}
-
-.nav__link:hover {
-  color: #555;
-}
-
-.nav__link {
-  position: relative;
-}
-
-.nav__link:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: #aaa;
-  height: 1px;
-}
-
-.nav__link:hover:after {
-  width: 100%;
-}
-
-.nav__link {
-  transition: all 2s;
-}
-.nav__link:after {
-  text-align: left;
-  content: '.';
-  margin: 0;
-  opacity: 0;
-}
-
-.nav__link:hover {
-  color: #fff;
-  z-index: 1;
-}
-
-.nav__link:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  opacity: 1;
-}
-
 /* Keyframes */
+
 @keyframes fill {
   0% {
     width: 0%;
@@ -240,7 +237,22 @@
   100% {
     width: 100%;
     height: 100%;
-    background: #333;
+    background: $blue-title;
+  }
+}
+
+@keyframes footer {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 100%;
+    background: $blue-title;
   }
 }
 

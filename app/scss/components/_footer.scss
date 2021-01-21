@@ -51,13 +51,20 @@
   &__tel {
     display: inline-block;
   }
+
+  &__tel span {
+    cursor: inherit;
+  }
 }
+
+
 
 .footer__tel, 
 .footer__email,
 .service__link,
 .acc__link,
 .footer__menu-link {
+  position: relative;
   transition: color 0.4s ease-out;
 }
 
@@ -67,6 +74,30 @@
 .acc__link:hover,
 .footer__menu-link:hover {
   color: $dark-title;
+}
+
+.footer__tel:after,
+.footer__email:after,
+.service__link:after,
+.acc__link:after,
+.footer__menu-lin:after {
+  content: ".";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  color: transparent;
+  height: 1px;
+}
+
+.footer__tel:hover:after,
+.footer__email:hover:after,
+.service__link:hover:after,
+.acc__link:hover:after,
+.footer__menu-link:hover:after {
+  z-index: -10;
+  animation: footer 0.5s forwards;
+  opacity: 1;
 }
 
 .service__item:not(:last-child),
