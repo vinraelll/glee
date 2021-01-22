@@ -16,31 +16,37 @@
     align-content: space-between;
     min-height: 525px;
   }
-}
 
-.new-design__item {
-  flex-grow: 1;
-  max-width: 370px;
-  width: 100%;
-  max-height: 246px;
-  padding: 40px 5px 5px 35px;
-  background-color: #f8f8f8;
-  overflow: hidden;
-
-  &-title {
-    max-width: 175px;
-    @extend %DMSans-700;
-    font-size: 20px;
-    margin-bottom: 20px;
+  &__item {
+    flex-grow: 1;
+    max-width: 370px;
+    width: 100%;
+    max-height: 246px;
+    padding: 40px 5px 5px 35px;
+    background-color: #f8f8f8;
+    overflow: hidden;
   }
 
-  &-type {
+  &__name {
+    display: block;
+    max-width: 175px;
+    margin-bottom: 20px;
+    @extend %DMSans-700;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__type {
     @extend %DMSans-700;
     font-size: 16px;
     color: $light-blue;
   }
 
-  &-img {
+  &__img {
     transform: translateX(80px) translateY(-15px);
   }
 }
