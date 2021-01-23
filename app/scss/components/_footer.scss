@@ -1,5 +1,4 @@
 .footer {
-  @extend %rubik-400;
   font-size: 14px;
   color: #7b7b7b;
 
@@ -22,8 +21,6 @@
 
   &__title {
     @extend %DMSans-700;
-    font-size: 16px;
-    line-height: 1.2;
     margin: 20px 0;
     text-transform: uppercase;
     color: #1f2044;
@@ -42,6 +39,15 @@
     line-height: 1.7;
   }
 
+  &__address {
+    margin: 30px 0 20px;
+    line-height: 1.7;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
   &__form {
     position: relative;
   }
@@ -53,7 +59,6 @@
     background-color: $light-accent;
 
     &::placeholder {
-      @extend %DMSans-400;
       font-size: 12px;
       color: #234969;
     }
@@ -62,23 +67,11 @@
   &__btn {
     position: absolute;
     padding: 15px;
-    @extend %DMSans-400;
-    font-size: 14px;
     color: #fff;
     border: none;
     background-color: #a3bbc8;
-    cursor: pointer;
   }
 
-  &__address {
-    margin: 30px 0 20px;
-    line-height: 1.7;
-
-    span {
-      text-transform: uppercase;
-    }
-  }
-  
   &__tel {
     display: inline-block;
   }
