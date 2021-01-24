@@ -28,7 +28,6 @@
     margin-bottom: 40px;
     @extend %rubik-500;
     font-size: 72px;
-    line-height: 1;
     text-transform: uppercase;
     color: $blue-title;
   }
@@ -36,7 +35,6 @@
   &__subtitle {
     max-width: 340px;
     margin-bottom: 40px;
-    @extend %rubik-400;
     font-size: 18px;
     line-height: 1.8;
     color: $dark-blue;
@@ -49,7 +47,6 @@
     padding: 20px 25px;
     @extend %rubik-500;
     font-size: 15px;
-    line-height: 1;
     color: #fff;
     background-color: $light-blue;
   }
@@ -125,7 +122,6 @@ ul.slick-dots {
   &__subtitle {
     max-width: 200px;
     @extend %DMSans-400; 
-    font-size: 16px;
     line-height: 2;
     color: #585858;
   }
@@ -139,16 +135,14 @@ ul.slick-dots {
   width: 54px;
   height: 54px;
   @extend %background;
+  background-size: contain;
 }
 
 .advantages__descr--support::before {
-  height: 56px;
   background-image: url('../../images/icons/support-icon.png');
 }
 
 .advantages__descr--delivery::before {
-  width: 54px;
-  height: 37px;
   background-image: url('../../images/icons/delivery-icon.png');
 }
 
