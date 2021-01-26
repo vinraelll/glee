@@ -3,7 +3,7 @@
   color: #7b7b7b;
 
   a {
-    color: #7b7b7b;
+    color: inherit;
   }
 
   &__content {
@@ -28,6 +28,7 @@
 
   &__contacts {
     max-width: 190px;
+    font-style: normal;
   }
 
   &__newsletter {
@@ -62,6 +63,10 @@
       font-size: 12px;
       color: #234969;
     }
+
+    // &:focus {
+
+    // }
   }
 
   &__btn {
@@ -104,33 +109,39 @@
     transition: color 0.4s ease-out;
   }
 
-  &__tel:hover,
-  &__email:hover,
-  &__link:hover,
-  &__ref:hover {
-    color: $dark-title;
+  &__tel,
+  &__email,
+  &__link,
+  &__ref {
+    &:hover {
+      color: $dark-title;
+    }
+  }
+    
+  &__tel,
+  &__email,
+  &__link,
+  &__ref {
+    &::after {
+      content: ".";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      color: transparent;
+      height: 1px;
+    } 
   }
 
-  &__tel:after,
-  &__email:after,
-  &__link:after,
-  &__ref:after {
-    content: ".";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    color: transparent;
-    height: 1px;
-  }
-
-  &__tel:hover:after,
-  &__email:hover:after,
-  &__link:hover:after,
-  &__ref:hover:after {
-    z-index: -10;
-    animation: footer 0.5s forwards;
-    opacity: 1;
+  &__tel,
+  &__email,
+  &__link,
+  &__ref { 
+    &:hover::after {
+      z-index: -10;
+      animation: footer 0.5s forwards;
+      opacity: 1;
+    }
   }
 
   &__part:not(:last-child),

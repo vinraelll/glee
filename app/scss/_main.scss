@@ -4,6 +4,18 @@ body {
   line-height: 1.2;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .container {
   max-width: 1190px;
   padding: 0px 10px;
@@ -12,14 +24,6 @@ body {
 
 .container--lg {
   max-width: 1790px;
-}
-
-.reset-btn {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  transition: color 0.4s ease-out;
-  cursor: pointer;
 }
 
 .title {
