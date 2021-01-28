@@ -1,8 +1,7 @@
 .filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0px auto 80px;
-  text-align: center;
 
   &__item:not(:last-child) {
     margin-right: 30px;
