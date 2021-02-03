@@ -20,7 +20,8 @@ function styles() {
   return src([
     'app/scss/style.scss',
     'node_modules/slick-carousel/slick/slick.css',
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+    'node_modules/@fortawesome/fontawesome-free/css/all.css'
   ])  
   .pipe(scss({outputStyle: 'compressed'}))
   .pipe(concat('style.min.css'))
@@ -38,6 +39,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/@fortawesome/fontawesome-free/js/all.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))

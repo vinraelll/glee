@@ -1,0 +1,55 @@
+.video {
+  padding: 200px 0px;
+  margin-bottom: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__anim {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background: #a3bbc8;
+      transform: translate(-50%, -50%);
+      opacity: 0.5;
+      transition: all 0.3s linear 0s;
+      animation-name: video-anim;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-delay: 0.8s;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+    background-color: $light-blue;
+    transition: background-color 0.3s linear;
+    z-index: 2000;
+
+    &:hover {
+      background-color: $accent;
+    }
+
+    
+  }
+}

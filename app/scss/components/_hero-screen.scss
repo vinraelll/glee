@@ -49,6 +49,11 @@
     font-size: 15px;
     color: #fff;
     background-color: $light-blue;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: $dark-blue;
+    }
   }
 
   &__link::after {

@@ -10,15 +10,12 @@
   }
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: space-between;
-    min-height: 525px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
   }
 
   &__item {
-    flex-grow: 1;
     max-width: 370px;
     width: 100%;
     max-height: 246px;
@@ -46,7 +43,20 @@
     color: $light-blue;
   }
 
+  &__image {
+    position: relative;
+    height: 120px;
+    transform: translateX(70px) translateY(-22px);
+  }
+
   &__img {
-    transform: translateX(80px) translateY(-15px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
   }
 }

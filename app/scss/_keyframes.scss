@@ -16,6 +16,30 @@
   }
 }
 
+@keyframes video-anim {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+// @keyframes pulse {
+//   from {
+//     transform: scale3d(1, 1, 1);
+//   }
+
+//   50% {
+//     transform: scale3d(1.05, 1.05, 1.05);
+//   }
+
+//   to {
+//     transform: scale3d(1, 1, 1);
+//   }
+// }
+
 @keyframes footer {
   0% {
     width: 0%;
