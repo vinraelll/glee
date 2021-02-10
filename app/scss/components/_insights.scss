@@ -1,6 +1,5 @@
 .insights {
   position: relative;
-  margin-bottom: 20px;
   @extend %DMSans-700;
   color: $dark-title;
 
@@ -18,7 +17,7 @@
     position: relative;
     padding: 12px 20px 12px 12px;
     color: inherit;
-    transition: color 0.3s linear;
+    transition: color .3s linear;
 
     &::after {
       content: "\ea42";
@@ -30,7 +29,7 @@
 
   &__link, 
   &__text {
-    transition: color 0.3s linear;
+    transition: color .3s linear;
 
     &:hover {
       color: $accent;
@@ -67,7 +66,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    padding: 0px 35px;
+    padding: 0 35px;
   }
 
   &__category {
@@ -81,6 +80,13 @@
     text-transform: uppercase;
     background-color: $light-blue;
     transform: translateY(-50%);
+    transition: all .3s linear;
+    // transition: color, background-color .3s linear; при такой записи не применяется плавность на одно из свойств!
+
+    &:hover {
+      color: $blue-title;
+      background-color: $accent;
+    }
   }
 
   &__text {
@@ -107,6 +113,11 @@
   &__author {
     position: relative;
     padding-left: 20px;
+    transition: color .3s linear;
+
+    &:hover {
+      color: $accent;
+    }
   }
 
   &__date,
@@ -150,12 +161,4 @@
     align-items: center;
     justify-content: center;
   }
-
-  &__image {
-    // position: absolute;
-    // left: 0;
-    // right: 0;
-    // margin: 0px auto;
-  }
-
 } 

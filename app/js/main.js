@@ -11,7 +11,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     arrows: false,
     dots: false,
-
   })
+
+  const mixer = mixitup('.bestseller__items, .new-design__inner');
 
 })

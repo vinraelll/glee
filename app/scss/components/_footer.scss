@@ -9,7 +9,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    padding: 80px 0;
+    padding: 100px 0;
     border-bottom: 1px solid #dae4e9;
   }
   
@@ -63,10 +63,6 @@
       font-size: 12px;
       color: #234969;
     }
-
-    // &:focus {
-
-    // }
   }
 
   &__btn {
@@ -75,6 +71,12 @@
     color: #fff;
     border: none;
     background-color: #a3bbc8;
+    transition: background-color, color, .3s linear;
+
+    &:hover {
+      color: $blue-title;
+      background-color: $accent;
+    }
   }
 
   &__tel {
@@ -90,15 +92,13 @@
     justify-content: space-between;
   }
 
-  &__roll {
-    &:not(:last-child) {
+  &__roll:not(:last-child) {
       padding-right: 15px;
       border-right: 1px solid #7b7b7b;
     }
 
-    &:not(:first-child) {
+  &__roll:not(:first-child) {
       padding-left: 15px;
-    }
   }
 
   &__tel,
@@ -106,7 +106,7 @@
   &__link,
   &__ref {
     position: relative;
-    transition: color 0.4s ease-out;
+    transition: color .3s ease-out;
   }
 
   &__tel,
@@ -139,7 +139,7 @@
   &__ref { 
     &:hover::after {
       z-index: -10;
-      animation: footer 0.5s forwards;
+      animation: footer .5s forwards;
       opacity: 1;
     }
   }
@@ -147,6 +147,14 @@
   &__part:not(:last-child),
   &__tel {
     margin-bottom: 20px;
+  }
+}
+
+.address__link {
+  transition: color .3s linear;
+
+  &:hover {
+    color: $dark-title;
   }
 }
 

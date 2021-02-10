@@ -1,6 +1,6 @@
 .video {
   padding: 200px 0px;
-  margin-bottom: 100px;
+  margin: 100px 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -21,13 +21,9 @@
       top: 50%;
       background: #a3bbc8;
       transform: translate(-50%, -50%);
-      opacity: 0.5;
-      transition: all 0.3s linear 0s;
-      animation-name: video-anim;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      animation-delay: 0.8s;
+      opacity: .5;
+      transition: all .3s linear 0s;
+      animation: video-anim 2s linear infinite;
     }
   }
 
@@ -38,18 +34,23 @@
     align-items: center;
     width: 100px;
     height: 100px;
-    margin: 0px auto;
+    margin: 0 auto;
     border-radius: 50%;
     font-size: 22px;
     color: #fff;
     background-color: $light-blue;
-    transition: background-color 0.3s linear;
+    transition: background-color .3s linear;
     z-index: 2000;
+
+    svg {
+      width: 25px;
+      height: 25px;
+      transform: translateX(10%);
+      fill: #fff;
+    }
 
     &:hover {
       background-color: $accent;
     }
-
-    
   }
 }
