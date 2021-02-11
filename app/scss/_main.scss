@@ -18,8 +18,8 @@ body {
 
 .container {
   max-width: 1190px;
-  padding: 0px 10px;
-  margin: 0px auto;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .container--lg {
@@ -28,7 +28,7 @@ body {
 
 .title {
   max-width: max-content;
-  margin: 0px auto 40px;
+  margin: 0 auto 40px;
   @extend %DMSans-700;
   font-size: 36px;
   color: $dark-title;
