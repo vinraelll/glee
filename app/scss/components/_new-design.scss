@@ -1,6 +1,10 @@
 .new-design {
   margin-bottom: 100px;
 
+  @include phone {
+    margin-bottom: 50px;
+  }
+
   &__title {
     max-width: max-content;
     margin: 0px auto 40px;
@@ -13,6 +17,16 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+
+    @include tablet-portrait {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @include phone {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
   }
 
   &__item {
@@ -22,6 +36,11 @@
     padding: 40px 5px 5px 35px;
     background-color: #f8f8f8;
     overflow: hidden;
+
+    @include phone {
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
 
   &__name {

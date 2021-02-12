@@ -6,11 +6,28 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 45px;
+
+    @include phone {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
     font-size: 36px;
+
+    @include tablet-portrait {
+      margin: 0 20px 10px 0;
+      font-size: 30px;
+    }
+
+    @include phone {
+      width: 100%;
+      margin: 0 auto 10px;
+      font-size: 24px;
+      text-align: center;
+    }
   }
 
   &__link {
@@ -18,6 +35,15 @@
     padding: 12px 20px 12px 12px;
     color: inherit;
     transition: color .3s linear;
+
+    @include tablet-portrait {
+      padding: 8px 20px 7px 0;
+    }
+
+    @include phone {
+      margin: 0 auto;
+      padding: 6px 20px 3px 0;
+    }
 
     &::after {
       content: "\ea42";
@@ -39,17 +65,28 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include tablet-desktop {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 
   &__item {
-    max-width: 370px;
+    width: 31%;
     padding-bottom: 30px;
     border-radius: 5px;
     background: #fff;
     @extend %shadow;
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include tablet-desktop {
+      width: calc(50% - 15px);
+      margin-bottom: 20px;
+    }
+
+    @include tablet-portrait {
+      width: calc(100% - 15px);
+      
     }
   }
 
@@ -60,6 +97,8 @@
   &__img {
     max-height: 100%;
     height: 100%;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
     object-fit: cover;
   }
 
@@ -81,7 +120,6 @@
     background-color: $light-blue;
     transform: translateY(-50%);
     transition: all .3s linear;
-    // transition: color, background-color .3s linear; при такой записи не применяется плавность на одно из свойств!
 
     &:hover {
       color: $blue-title;
@@ -103,6 +141,10 @@
     font-size: 12px;
     text-transform: uppercase;
     color: #222933;
+
+    @include phone {
+      font-size: 10px;
+    }
   }
 
   &__date {
@@ -145,11 +187,23 @@
     background-color: #fdf6ef;
     transform: translateY(-102%);
     z-index: -1;
+
+    @include tablet-desktop {
+      height: 360px;
+      transform: translateY(-105%);
+    }
+
+    @include tablet-portrait {
+      height: 340px;
+    }
+
+    @include phone {
+      height: 358px;
+    }
   }
 }
 
 .partners {
-
   &__item {
     width: 20%;
   }
@@ -160,5 +214,10 @@
     padding: 135px 0;
     align-items: center;
     justify-content: center;
+
+    @include tablet-desktop {
+      padding: 100px 0;
+    }
+
   }
 } 

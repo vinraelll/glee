@@ -9,14 +9,29 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 100px 0;
     border-bottom: 1px solid #dae4e9;
+
+    @include phone {
+      padding: 20px 0;
+    }
+  }
+
+  &__item {
+    padding: 0 25px;
   }
   
   &__bottom {
     display: flex;
     justify-content: space-between;
     padding: 35px 0;
+
+    @include tablet-portrait {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
   }
 
   &__title {
@@ -29,10 +44,24 @@
   &__contacts {
     max-width: 190px;
     font-style: normal;
+
+    @include phone {
+      max-width: none;
+      width: 100%;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
   }
 
   &__newsletter {
     max-width: 270px;
+
+    @include tablet-desktop {
+      margin-top: 20px;
+      max-width: 100%;
+      flex-grow: 1;
+      border-top: 1px solid #e0e0e0;
+    }
   }
 
   &__text {
@@ -58,6 +87,15 @@
     padding: 15px;
     border: none;
     background-color: $light-accent;
+
+    @include tablet-desktop {
+      width: 100%;
+      max-width: 230px;
+    }
+
+    @include phone {
+      max-width: 150px;
+    }
 
     &::placeholder {
       font-size: 12px;
@@ -87,9 +125,20 @@
     cursor: inherit;
   }
 
+  &__copy {
+    @include tablet-portrait {
+      font-size: 13px;
+      order: 1;
+    }
+  }
+
   &__refs { 
     display: flex;
     justify-content: space-between;
+
+    @include tablet-portrait {
+      margin-bottom: 20px;
+    }
   }
 
   &__roll:not(:last-child) {
