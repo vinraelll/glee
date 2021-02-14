@@ -48,3 +48,19 @@ body {
 .icon {
   display: inline-block;
 }
+
+.body-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  transform: translateX(-100%);
+  transition: transform .3s linear;
+}
+
+.body-overlay.active {
+  transform: translateX(0%);
+}

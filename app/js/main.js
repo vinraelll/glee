@@ -1,8 +1,27 @@
 $(document).ready(function() {
+  
+  const sidebar = document.querySelector('.sidebar')
+  const sidebarBody = document.querySelector('.sidebar__body')
+  const sidebarMenu = document.querySelector('.sidebar__menu')
+  const sidebarOpen = document.querySelector('.controls__link--tel')
+  const sidebarClose = document.querySelector('.sidebar__btn')
+  const overlay = document.querySelector('.body-overlay')
+
+  sidebarOpen.addEventListener('click', e => {
+    sidebar.classList.add('visible')
+    overlay.classList.add('active')
+  })
+
+  sidebarClose.addEventListener('click', e => {
+    sidebar.classList.remove('visible')
+    overlay.classList.remove('active')
+  })
 
   $('.slider').slick({
+    autoplay: true,
     arrows: false,
     dots: true,
+    autoplaySpeed: 3000,
   })
 
   $('.partners').slick({
