@@ -8,11 +8,11 @@
   overflow-y: auto;
   color: #565872;
   line-height: 2;
-  box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: -5px 0 20px -5px rgba(0, 0, 0, .5);
   z-index: 3333;
   background-color: #fff;
   transform: translateX(110%);
-  transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all .3s cubic-bezier(0.785, 0.135, 0.15, .86);
 
   &.visible {
     transform: translateX(0%);
@@ -22,6 +22,10 @@
     @include desktop-below {
       display: none;
     }
+  }
+
+  & address {
+    font-style: normal;
   }
 
   &__close {
@@ -63,6 +67,24 @@
     color: $accent;
   }
 
+  &__google {
+    padding-bottom: 5px;
+  }
+
+  &__google,
+  &__links {
+    border-bottom: 1px solid #FFF;
+    transition: border-bottom .3s linear;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &__links {
+    display: inline-block;
+  }
+
   &__photo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -70,7 +92,16 @@
     padding: 30px 0;
   }
 
-  &__instagram {
+  //ниже написано обращение таким образом 
+  // в связи с конфликтом со стилями, 
+  // прописанными всем ul в файле ресет, а точнее с (padding) 
+  // так как padding обнулен по дефолту у всех ул
+  
+  & ul.sidebar__photo {
+    padding: 30px 0;
+  }
+
+  &__photo li {
     padding: 10px;
     background-color: rgba(182, 182, 182, 0.2);
   }
@@ -85,6 +116,12 @@
     display: flex;
   }
 
+  &__social li {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
   &__link {
     display: flex;
     justify-content: center;
@@ -97,10 +134,6 @@
 
     &:hover {
       background-color: $accent;
-    }
-
-    &:not(:last-child) {
-      margin-right: 10px;
     }
   }
 

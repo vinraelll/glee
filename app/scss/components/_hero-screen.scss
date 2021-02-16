@@ -35,8 +35,15 @@
     }
 
     @include tablet-landscape {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding: 60px 20px;
     }
+  }
+
+  &__wrapper a {
+    outline: transparent;
   }
 
   &__inner {
@@ -44,6 +51,14 @@
 
     @include desktop-below {
       max-width: 385px;
+    }
+
+    @include tablet-landscape {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     @include phone {
@@ -81,21 +96,16 @@
 
   &__subtitle {
     max-width: 340px;
-    margin-bottom: 40px;
     font-size: 18px;
     line-height: 1.8;
     color: $dark-blue;
-
-    @include desktop-below {
-      margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
 
     @include tablet-landscape {
-      margin-bottom: 40px;
+      margin: 0 auto 30px;
     }
 
     @include phone {
-      margin-bottom: 30px;
       font-size: 16px;
     }
   }
@@ -112,7 +122,7 @@
     }
 
     @include tablet-landscape {
-      display: none;
+      align-self: center;
     }
   }
 
@@ -130,17 +140,26 @@
     &:hover {
       background-color: $dark-blue;
     }
+
+    @include tablet-landscape {
+      width: 100%;
+      text-align: left;
+    }
+
+    @include phone-below {
+      max-width: 170px;
+      padding: 14px 18px;
+    }
   }
 
-  &__link::after {
-    content: "";
+  &__link svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 22px;
     height: 9px;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background-image: url('../../images/icons/slider-link-arrow.svg');
+    fill: #fff;
   }
 }
 
@@ -193,8 +212,12 @@ ul.slick-dots {
     }
 
     @include tablet-desktop {
-      align-items: flex-start;
+      align-items: center;
       padding: 34px 30px;
+    }
+
+    @include phone-below {
+      padding: 30px 20px;
     }
   }
 
@@ -210,6 +233,15 @@ ul.slick-dots {
   &__descr {
     position: relative;
     padding-left: 90px;
+    max-width: 290px;
+
+    @include desktop-below {
+      width: 400px;
+    }
+
+    @include tablet-desktop {
+      max-width: 100%;
+    }
 
     @include phone {
       padding-left: 69px;
@@ -231,16 +263,23 @@ ul.slick-dots {
     margin-bottom: 8px;
     @extend %DMSans-700;
     font-size: 18px;
+
+    @include phone-below {
+      font-size: 16px;
+    }
   }
 
   &__subtitle {
-    max-width: 200px;
     @extend %DMSans-400; 
     line-height: 2;
     color: #585858;
 
     @include phone {
       line-height: 1.5;
+    }
+
+    @include phone-below {
+      font-size: 14px;
     }
   }
 

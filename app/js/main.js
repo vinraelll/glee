@@ -1,20 +1,28 @@
 $(document).ready(function() {
   
   const sidebar = document.querySelector('.sidebar')
-  const sidebarBody = document.querySelector('.sidebar__body')
-  const sidebarMenu = document.querySelector('.sidebar__menu')
   const sidebarOpen = document.querySelector('.controls__link--tel')
   const sidebarClose = document.querySelector('.sidebar__btn')
   const overlay = document.querySelector('.body-overlay')
+  const body = document.body
+
 
   sidebarOpen.addEventListener('click', e => {
     sidebar.classList.add('visible')
     overlay.classList.add('active')
+    body.classList.add('scrollLock')
   })
 
   sidebarClose.addEventListener('click', e => {
     sidebar.classList.remove('visible')
     overlay.classList.remove('active')
+    body.classList.remove('scrollLock')
+  })
+
+  overlay.addEventListener('click', e => {
+    sidebar.classList.remove('visible')
+    overlay.classList.remove('active')
+    body.classList.remove('scrollLock')
   })
 
   $('.slider').slick({
@@ -52,6 +60,18 @@ $(document).ready(function() {
     ]
   })
 
-  const mixer = mixitup('.bestseller__items, .new-design__inner');
+  mixitup('.bestseller__items, .new-design__inner');
+
+  $('.bestseller__items').mixItUp({
+    selectors: {
+      filter: '.filter__btn'
+    }
+  });
+
+  $('.new-design__inner').mixItUp({
+    selectors: {
+      filter: '.filter__btn2'
+    }
+  });
 
 })
