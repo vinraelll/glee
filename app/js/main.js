@@ -6,24 +6,15 @@ $(document).ready(function() {
   const overlay = document.querySelector('.body-overlay')
   const body = document.body
 
+  const sidebarToggle = () => {
+    sidebar.classList.toggle('visible')
+    overlay.classList.toggle('active')
+    body.classList.toggle('scrollLock')
+  }
 
-  sidebarOpen.addEventListener('click', e => {
-    sidebar.classList.add('visible')
-    overlay.classList.add('active')
-    body.classList.add('scrollLock')
-  })
-
-  sidebarClose.addEventListener('click', e => {
-    sidebar.classList.remove('visible')
-    overlay.classList.remove('active')
-    body.classList.remove('scrollLock')
-  })
-
-  overlay.addEventListener('click', e => {
-    sidebar.classList.remove('visible')
-    overlay.classList.remove('active')
-    body.classList.remove('scrollLock')
-  })
+  sidebarOpen.addEventListener('click', sidebarToggle)
+  sidebarClose.addEventListener('click', sidebarToggle)
+  overlay.addEventListener('click', sidebarToggle)
 
   $('.slider').slick({
     autoplay: true,
@@ -60,18 +51,15 @@ $(document).ready(function() {
     ]
   })
 
-  mixitup('.bestseller__items, .new-design__inner');
-
-  $('.bestseller__items').mixItUp({
+  const mixerBestseller = mixitup('.bestseller__items', {
     selectors: {
-      filter: '.filter__btn'
+      control: '.filter__bestseller'
     }
   });
 
-  $('.new-design__inner').mixItUp({
+  const mixerDesign = mixitup('.new-design__inner', {
     selectors: {
-      filter: '.filter__btn2'
+      control: '.filter__design'
     }
   });
-
 })

@@ -3,7 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto 80px;
-  padding: 0 10px !important;
+  padding: 0 10px;
 
   @include tablet-portrait {
     margin-bottom: 40px;
@@ -37,8 +37,8 @@
     }
   }
 
-  &__btn,
-  &__btn2 {
+  &__bestseller,
+  &__design {
     @extend %DMSans-700;
     color: #8b8b8b;
     border: none;
@@ -47,7 +47,10 @@
       padding: 14px;
     }
   }
+}
 
+ul.filter {
+  padding: 0 10px;
 }
 
 .mixitup-control-active {

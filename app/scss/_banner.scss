@@ -1,0 +1,18 @@
+.banner {
+  padding: 35px 10px;
+  text-align: center;
+  background-color: $banner;
+
+  &__title {
+    @extend %rubik-300;
+    font-size: 36px;
+    color: #222933;
+  }
+}
+
+.breadcrumbs {
+  display: inline-flex;
+  @extend %rubik-400;
+  font-size: 14px;
+  color: #888c91;
+}

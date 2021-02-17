@@ -6,6 +6,7 @@ $dark-title: #1a1a1a;
 $blue-title: #243f4d;
 $light-blue: #a3bbc8;
 $dark-blue: #436372;
+$banner: #edf1f4;
 
 
 %background {
@@ -47,6 +48,11 @@ $dark-blue: #436372;
 %pragmatica-500 {
   font-family: 'PragmaticaC', sans-serif;
   font-weight: 500;
+}
+
+%rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
 }
 
 %rubik-400 {

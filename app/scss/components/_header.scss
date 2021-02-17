@@ -276,18 +276,16 @@
   }
 
   &__input {
-    height: 50px;
-    font-size: 16px;
-    border: none;
-    @extend %DMSans-500;
-    outline: transparent;
-    padding: 3px;
-    padding-right: 35px;
-    padding-left: 15px;
-    width: 0;
     position: absolute;
+    width: 0;
     top: 0;
     right: 0;
+    height: 50px;
+    font-size: 16px;
+    padding: 3px 35px 3px 15px;
+    @extend %DMSans-500;
+    border: none;
+    outline: transparent;
     background: none;
     background-color: #edf1f4;
     border-radius: 25px; 

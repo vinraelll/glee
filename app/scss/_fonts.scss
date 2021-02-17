@@ -1,5 +1,14 @@
 @font-face {
   font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src:  url('../fonts/Rubik/Rubik-Light.woff') format('woff'),
+        url('../fonts/Rubik/Rubik-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -90,7 +99,16 @@
 
 @font-face {
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:  url('../fonts/Poppins/Poppins-SemiBold.woff') format('woff'),
+        url('../fonts/Poppins/Poppins-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   src:  url('../fonts/Poppins/Poppins-Bold.woff') format('woff'),

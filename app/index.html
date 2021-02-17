@@ -37,7 +37,7 @@
     <symbol viewBox="0 0 22 9" id="arrow-right">
      <path d="M.3 5.47h16.94l-.1 2.86a.3.3 0 00-.08.2.323.323 0 00.08.21l.18.17a.267.267 0 00.4 0l4.2-4.21a.3.3 0 00.08-.2.323.323 0 00-.08-.21L17.72.08a.29.29 0 00-.4 0l-.18.17a.323.323 0 00-.08.21.318.318 0 00.08.2l.12 2.86H.29a.3.3 0 00-.29.3v1.37a.291.291 0 00.3.28z"></path>
     </symbol>
-    <symbol viewBox="0 0 20 20" id="bestseller-search">
+    <symbol viewBox="0 0 20 20" id="search-icon">
       <path d="M19.45 16.8l-4.588-4.59a8.827 8.827 0 01-2.651 2.65l4.588 4.59a1.874 1.874 0 002.651-2.65zM15 7.5A7.5 7.5 0 107.5 15 7.5 7.5 0 0015 7.5zm-7.5 5.62a5.625 5.625 0 115.625-5.62A5.628 5.628 0 017.5 13.12zM3.125 7.5h1.25A3.135 3.135 0 017.5 4.37V3.12A4.386 4.386 0 003.125 7.5z"></path>
     </symbol>
     <symbol viewBox="0 0 18.94 16.969" id="cart-icon">
@@ -52,11 +52,11 @@
     <symbol viewBox="0 0 22 9" id="slider-link-arrow">
       <path d="M.3 5.472h16.948l-.1 2.857a.292.292 0 000 .41l.172.172a.28.28 0 00.2.086.285.285 0 00.2-.084l4.193-4.211A.292.292 0 0022 4.5a.283.283 0 00-.084-.2L17.723.087a.289.289 0 00-.407 0l-.172.173a.287.287 0 00-.084.2.278.278 0 00.084.2l.113 2.865H.292A.3.3 0 000 3.82v1.37a.292.292 0 00.3.282z"></path>
     </symbol>
-    <symbol viewBox="0 0 15.28 15.281" id="zoom-icon">
-      <path d="M2.98 6.076a.617.617 0 01.75.485 2.583 2.583 0 00.78 1.489A3.036 3.036 0 006 8.827a.636.636 0 01.49.743.649.649 0 01-.72.515 4.21 4.21 0 01-2.14-1.13A4.164 4.164 0 012.5 6.819a.6.6 0 01.48-.743zM6.26 0a6.267 6.267 0 016.28 6.257 6.136 6.136 0 01-.57 2.6l2.34 2.036c1.7 1.746.74 3.266.29 3.717-.42.454-1.99 1.414-3.73-.292l-2.06-2.35A6.261 6.261 0 116.26 0zm5.55 13.517a1.352 1.352 0 001.88.226 1.313 1.313 0 00-.23-1.874l-2.16-1.88a6.236 6.236 0 01-1.37 1.34zm-5.55-2.312a4.948 4.948 0 10-4.97-4.948A4.963 4.963 0 006.26 11.2z"></path>
-    </symbol>
     <symbol viewBox="0 0 22 18" id="bestseller-heart">
       <path d="M21.99 5.82a6.208 6.208 0 00-1.849-4.1A5.871 5.871 0 0016 0c-2.311 0-3.948 1.78-4.827 2.74a2.156 2.156 0 01-.156.17l-.083-.09C10.134 1.9 8.458 0 5.996 0a5.873 5.873 0 00-4.139 1.72 6.208 6.208 0 00-1.849 4.1 6.845 6.845 0 001.271 4.34 29.307 29.307 0 004.763 4.75C7.747 16.32 9.992 18 11.007 18c1.032 0 3.269-1.68 4.965-3.09a29.234 29.234 0 004.746-4.75 6.935 6.935 0 001.272-4.34zm-2.376 3.61a27 27 0 01-4.431 4.42c-2.406 2-3.831 2.79-4.172 2.82-.342-.03-1.77-.83-4.188-2.84a26.78 26.78 0 01-4.437-4.4 5.6 5.6 0 01-1.054-3.54 4.807 4.807 0 014.666-4.57c1.863 0 3.216 1.54 3.943 2.37A1.52 1.52 0 0011 4.45a1.731 1.731 0 001.151-.81c.794-.87 2.122-2.32 3.851-2.32a4.807 4.807 0 014.666 4.57 5.528 5.528 0 01-1.054 3.54z"></path>
+    </symbol>
+    <symbol viewBox="0 0 32 32" id="play-icon">
+      <path d="M6 4l20 12-20 12z"></path>
     </symbol>
   </svg>
 
@@ -455,25 +455,25 @@
 
       <ul class="bestseller__filter filter">
         <li class="filter__item">
-          <button class="filter__btn active" data-filter="all">All</button>
+          <button class="filter__bestseller active" data-filter="all">All</button>
         </li>
         <li class="filter__item">
-          <button class="filter__btn" data-filter=".category-a">
+          <button class="filter__bestseller" data-filter=".category-a">
             Furnitures
           </button>
         </li>
         <li class="filter__item">
-          <button class="filter__btn" data-filter=".category-b">
+          <button class="filter__bestseller" data-filter=".category-b">
             Chairs
           </button>
         </li>
         <li class="filter__item">
-          <button class="filter__btn" data-filter=".category-c">
+          <button class="filter__bestseller" data-filter=".category-c">
             Lighting
           </button>
         </li>
         <li class="filter__item">
-          <button class="filter__btn" data-filter=".category-d">
+          <button class="filter__bestseller" data-filter=".category-d">
             Decor
           </button>
         </li>
@@ -487,7 +487,7 @@
             </div>
             <div class="bestseller__info">
               <div class="bestseller__name">
-                <p>Wooden radio</p>
+                <a href="#">Wooden radio</a>
               </div>
               <div class="bestseller__price">
                 <p>$29</p>
@@ -495,20 +495,29 @@
             </div>
             <div class="bestseller__links">
               <ul class="bestseller__links-inner">
-                <li class="bestseller__link">
-                  <svg class="icon icon__search">
-                    <use xlink:href="#bestseller-search"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__search">
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <span class="sr-only">Search button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__cart">
-                    <use xlink:href="#cart-icon"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__cart">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
+                    <span class="sr-only">Cart button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__heart">
-                    <use xlink:href="#bestseller-heart"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__heart">
+                      <use xlink:href="#bestseller-heart"></use>
+                      <span class="sr-only">Favorites button</span>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -520,7 +529,7 @@
             </div>
             <div class="bestseller__info">
               <div class="bestseller__name">
-                <p>Wooden radio</p>
+                <a href="#">Wooden radio</a>
               </div>
               <div class="bestseller__price">
                 <p>$29</p>
@@ -528,20 +537,29 @@
             </div>
             <div class="bestseller__links">
               <ul class="bestseller__links-inner">
-                <li class="bestseller__link">
-                  <svg class="icon icon__search">
-                    <use xlink:href="#bestseller-search"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__search">
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <span class="sr-only">Search button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__cart">
-                    <use xlink:href="#cart-icon"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__cart">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
+                    <span class="sr-only">Cart button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__heart">
-                    <use xlink:href="#bestseller-heart"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__heart">
+                      <use xlink:href="#bestseller-heart"></use>
+                      <span class="sr-only">Favorites button</span>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -553,7 +571,7 @@
             </div>
             <div class="bestseller__info">
               <div class="bestseller__name">
-                <p>Wooden radio</p>
+                <a href="#">Wooden radio</a>
               </div>
               <div class="bestseller__price">
                 <p>$29</p>
@@ -561,20 +579,29 @@
             </div>
             <div class="bestseller__links">
               <ul class="bestseller__links-inner">
-                <li class="bestseller__link">
-                  <svg class="icon icon__search">
-                    <use xlink:href="#bestseller-search"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__search">
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <span class="sr-only">Search button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__cart">
-                    <use xlink:href="#cart-icon"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__cart">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
+                    <span class="sr-only">Cart button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__heart">
-                    <use xlink:href="#bestseller-heart"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__heart">
+                      <use xlink:href="#bestseller-heart"></use>
+                      <span class="sr-only">Favorites button</span>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -587,7 +614,7 @@
             </div>
             <div class="bestseller__info">
               <div class="bestseller__name">
-                <p>Wooden radio</p>
+                <a href="#">Wooden radio</a>
               </div>
               <div class="bestseller__price">
                 <p>$29</p>
@@ -595,20 +622,29 @@
             </div>
             <div class="bestseller__links">
               <ul class="bestseller__links-inner">
-                <li class="bestseller__link">
-                  <svg class="icon icon__search">
-                    <use xlink:href="#bestseller-search"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__search">
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <span class="sr-only">Search button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__cart">
-                    <use xlink:href="#cart-icon"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__cart">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
+                    <span class="sr-only">Cart button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__heart">
-                    <use xlink:href="#bestseller-heart"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__heart">
+                      <use xlink:href="#bestseller-heart"></use>
+                      <span class="sr-only">Favorites button</span>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -621,7 +657,7 @@
             </div>
             <div class="bestseller__info">
               <div class="bestseller__name">
-                <p>Wooden radio</p>
+                <a href="#">Wooden radio</a>
               </div>
               <div class="bestseller__price">
                 <p>$29</p>
@@ -629,20 +665,29 @@
             </div>
             <div class="bestseller__links">
               <ul class="bestseller__links-inner">
-                <li class="bestseller__link">
-                  <svg class="icon icon__search">
-                    <use xlink:href="#bestseller-search"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__search">
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <span class="sr-only">Search button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__cart">
-                    <use xlink:href="#cart-icon"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__cart">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
+                    <span class="sr-only">Cart button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__heart">
-                    <use xlink:href="#bestseller-heart"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__heart">
+                      <use xlink:href="#bestseller-heart"></use>
+                      <span class="sr-only">Favorites button</span>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -655,7 +700,7 @@
             </div>
             <div class="bestseller__info">
               <div class="bestseller__name">
-                <p>Wooden radio</p>
+                <a href="#">Wooden radio</a>
               </div>
               <div class="bestseller__price">
                 <p>$29</p>
@@ -663,20 +708,29 @@
             </div>
             <div class="bestseller__links">
               <ul class="bestseller__links-inner">
-                <li class="bestseller__link">
-                  <svg class="icon icon__search">
-                    <use xlink:href="#bestseller-search"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__search">
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <span class="sr-only">Search button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__cart">
-                    <use xlink:href="#cart-icon"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__cart">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
+                    <span class="sr-only">Cart button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__heart">
-                    <use xlink:href="#bestseller-heart"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__heart">
+                      <use xlink:href="#bestseller-heart"></use>
+                      <span class="sr-only">Favorites button</span>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -688,7 +742,7 @@
             </div>
             <div class="bestseller__info">
               <div class="bestseller__name">
-                <p>Wooden radio</p>
+                <a href="#">Wooden radio</a>
               </div>
               <div class="bestseller__price">
                 <p>$29</p>
@@ -696,20 +750,29 @@
             </div>
             <div class="bestseller__links">
               <ul class="bestseller__links-inner">
-                <li class="bestseller__link">
-                  <svg class="icon icon__search">
-                    <use xlink:href="#bestseller-search"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__search">
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <span class="sr-only">Search button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__cart">
-                    <use xlink:href="#cart-icon"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__cart">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
+                    <span class="sr-only">Cart button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__heart">
-                    <use xlink:href="#bestseller-heart"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__heart">
+                      <use xlink:href="#bestseller-heart"></use>
+                      <span class="sr-only">Favorites button</span>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -721,7 +784,7 @@
             </div>
             <div class="bestseller__info">
               <div class="bestseller__name">
-                <p>Wooden radio</p>
+                <a href="#">Wooden radio</a>
               </div>
               <div class="bestseller__price">
                 <p>$29</p>
@@ -729,20 +792,29 @@
             </div>
             <div class="bestseller__links">
               <ul class="bestseller__links-inner">
-                <li class="bestseller__link">
-                  <svg class="icon icon__search">
-                    <use xlink:href="#bestseller-search"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__search">
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <span class="sr-only">Search button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__cart">
-                    <use xlink:href="#cart-icon"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__cart">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
+                    <span class="sr-only">Cart button</span>
+                  </button>
                 </li>
-                <li class="bestseller__link">
-                  <svg class="icon icon__heart">
-                    <use xlink:href="#bestseller-heart"></use>
-                  </svg>
+                <li class="bestseller__part">
+                  <button class="bestseller__link">
+                    <svg class="icon icon__heart">
+                      <use xlink:href="#bestseller-heart"></use>
+                      <span class="sr-only">Favorites button</span>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -796,23 +868,23 @@
 
       <ul class="bestseller__filter filter">
         <li class="filter__item">
-          <button class="filter__btn2 active" data-filter="all">All</button>
+          <button class="filter__design active" data-filter="all">All</button>
         </li>
         <li class="filter__item">
-          <button class="filter__btn2" data-filter=".furnitures">
+          <button class="filter__design" data-filter=".furnitures">
             Furnitures
           </button>
         </li>
         <li class="filter__item">
-          <button class="filter__btn2" data-filter=".chairs">Chairs</button>
+          <button class="filter__design" data-filter=".chairs">Chairs</button>
         </li>
         <li class="filter__item">
-          <button class="filter__btn2" data-filter=".lighting">
+          <button class="filter__design" data-filter=".lighting">
             Lighting
           </button>
         </li>
         <li class="filter__item">
-          <button class="filter__btn2" data-filter=".decor">Decor</button>
+          <button class="filter__design" data-filter=".decor">Decor</button>
         </li>
       </ul>
 
@@ -820,55 +892,61 @@
         <ul class="new-design__inner">
           <li class="new-design__item mix beds">
             <a class="new-design__name" href="#">Beat Flat Pendant Black</a>
-            <p class="new-design__type">Classic</p>
+            <div class="new-design__type">
+              <span>Classic</span>
+            </div>
             <div class="new-design__image">
-              <img class="new-design__img" src="images/products/product-11.png" alt="wide short beige couch with four
-                                        pillows" />
+              <img class="new-design__img" src="images/products/product-11.png" alt="wide short beige couch with four pillows" />
             </div>
           </li>
 
           <li class="new-design__item mix lighting">
             <a class="new-design__name" href="#">Lampre Sur Pieds Bamboo</a>
-            <p class="new-design__type">Classic</p>
+            <div class="new-design__type">
+              <span>Classic</span>
+            </div>
             <div class="new-design__image">
-              <img class="new-design__img" src="images/products/product-12.png" alt="large beige bed with dark
-                                        mattress" />
+              <img class="new-design__img" src="images/products/product-12.png" alt="large beige bed with dark mattress" />
             </div>
           </li>
 
           <li class="new-design__item mix decor">
             <a class="new-design__name" href="#">Rattan Rocking Chair</a>
-            <p class="new-design__type">Classic</p>
+            <div class="new-design__type">
+              <span>Classic</span>
+            </div>
             <div class="new-design__image">
-              <img class="new-design__img" src="images/products/product-13.png" alt="middle black armchair on round
-                                        support" />
+              <img class="new-design__img" src="images/products/product-13.png" alt="middle black armchair on round support" />
             </div>
           </li>
 
           <li class="new-design__item mix chairs">
             <a class="new-design__name" href="#">Rattan Rocking Chair</a>
-            <p class="new-design__type">Classic</p>
+            <div class="new-design__type">
+              <span>Classic</span>
+            </div>
             <div class="new-design__image">
-              <img class="new-design__img" src="images/products/product-14.png" alt="middle sized beige bed with high
-                                        walls" />
+              <img class="new-design__img" src="images/products/product-14.png" alt="middle sized beige bed with high walls" />
             </div>
           </li>
 
           <li class="new-design__item mix chairs">
             <a class="new-design__name" href="#">Rattan Rocking Chair</a>
-            <p class="new-design__type">Classic</p>
+            <div class="new-design__type">
+              <span>Classic</span>
+            </div>
             <div class="new-design__image">
-              <img class="new-design__img" src="images/products/product-15.png" alt="middle beige armchair on round
-                                        support" />
+              <img class="new-design__img" src="images/products/product-15.png" alt="middle beige armchair on round support" />
             </div>
           </li>
 
           <li class="new-design__item mix beds">
             <a class="new-design__name" href="#">Lampre Sur Pieds Bamboo</a>
-            <p class="new-design__type">Classic</p>
+            <div class="new-design__type">
+              <span>Classic</span>
+            </div>
             <div class="new-design__image">
-              <img class="new-design__img" src="images/products/product-16.png" alt="wide short beige couch with four
-                                        pillows" />
+              <img class="new-design__img" src="images/products/product-16.png" alt="wide short beige couch with four pillows" />
             </div>
           </li>
         </ul>
@@ -879,6 +957,7 @@
           <a class="video__link" href="https://www.youtube.com/watch?v=DqpgMBNdZhU" data-fancybox>
             <svg class="icon">
               <use xlink:href="#play-icon"></use>
+              <span class="sr-only">Press button to play the video</span>
             </svg>
           </a>
         </div>
@@ -904,8 +983,8 @@
                 enim ad minim veniam
               </a>
               <div class="insights__info">
-                <a class="insights__date" href="#"> 28 january, 2020 </a>
-                <a class="insights__author" href="#"> by admin </a>
+                <a class="insights__date" href="#">28 january, 2020</a>
+                <a class="insights__author" href="#">by admin</a>
               </div>
             </div>
           </li>
@@ -921,8 +1000,8 @@
                 ut labore et dolore
               </a>
               <div class="insights__info">
-                <a class="insights__date" href="#"> 28 january, 2020 </a>
-                <a class="insights__author" href="#"> by admin </a>
+                <a class="insights__date" href="#">28 january, 2020</a>
+                <a class="insights__author" href="#">by admin</a>
               </div>
             </div>
           </li>
@@ -938,8 +1017,8 @@
                 dolore
               </a>
               <div class="insights__info">
-                <a class="insights__date" href="#"> 28 january, 2020 </a>
-                <a class="insights__author" href="#"> by admin </a>
+                <a class="insights__date" href="#">28 january, 2020</a>
+                <a class="insights__author" href="#">by admin</a>
               </div>
             </div>
           </li>

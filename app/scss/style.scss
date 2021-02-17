@@ -1,3 +1,5 @@
+// main //
+
 @import 'reset';
 @import 'vars';
 @import 'fonts';
@@ -5,11 +7,21 @@
 @import 'main';
 @import 'mixins';
 
+// common //
+
+@import 'banner';
 @import 'components/header';
 @import 'components/sidebar';
-@import 'components/hero-screen';
-@import 'components/bestseller';
-@import 'components/new-design';
-@import 'components/video';
-@import 'components/insights';
 @import 'components/footer';
+
+// homepage //
+
+@import 'components/home/hero-screen';
+@import 'components/home/bestseller';
+@import 'components/home/new-design';
+@import 'components/home/video';
+@import 'components/home/insights';
+
+// about //
+
+// @import 'components/about/';
