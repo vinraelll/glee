@@ -1,0 +1,45 @@
+.terms {
+  padding: 120px 0;
+  color: $blue-title;
+  line-height: 1.9;
+
+  @include phone {
+    padding: 50px 0;
+  }
+
+  @include phone-below {
+    font-size: 14px;
+  }
+
+  &__part {
+    margin-bottom: 50px;
+
+    @include phone-below {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title {
+    @extend %rubik-500;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+    @include phone-below {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  & ol.terms__list {
+    padding-left: 40px;
+
+    @include phone-below {
+      padding-left: 20px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+}
+

@@ -1,0 +1,96 @@
+.login {
+  padding: 120px 0;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: $dark-blue;
+    border-bottom: 1px solid #f6f6f6;
+  }
+
+  &__label {
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 18px;
+    border: 1px solid #f6f6f6;
+  }
+
+  &__btn {
+    padding: 22px 0;
+    @extend %rubik-500;
+    font-size: 18px;
+    transition: color, background-color, .3s linear;
+  }
+
+  &__submit {
+    color: #fff;
+    background-color: $light-blue;
+    border: none;
+    margin-bottom: 35px;
+
+    &:hover {
+      color: $dark-blue;
+      background-color: $accent;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f6f6f6;
+  }
+
+  &__check {
+    display: flex;
+    margin-right: 70px;
+  }
+
+  &__checkbox {
+    margin-right: 5px;
+  }
+
+  &__help {
+    position: relative;
+    transition: all .3s linear;
+
+    &::after {
+      content: ".";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      color: transparent;
+      height: 1px;
+    } 
+
+    &:hover::after {
+      z-index: -10;
+      animation: footer .5s forwards;
+      opacity: 1;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__create {
+    color: $blue-title;
+    border: 1px solid $light-blue;
+
+    &:hover {
+      color: #fff;
+      background-color: $light-blue;
+    }
+  }
+}
