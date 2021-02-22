@@ -394,21 +394,26 @@
         </address>
 
         <div class="contact__inner">
+
           <form class="contact__form">
             <div class="contact__box">
-              <label for="contact__user">
-                <input class="contact__input contact__input--user" type="text" placeholder="name" id="contact__user">
-              </label>
-              <label for="contact__mail">
-                <input class="contact__input contact__input--mail" type="email" placeholder="email" id="contact__mail">
-              </label>
+              <div class="contact__group contact__group--user">
+                <input class="contact__input" type="text" placeholder="name" id="contact__user">
+                <label class="contact__label" for="contact__user"></label>
+              </div>
+              <div class="contact__group contact__group--mail">
+                <input class="contact__input" type="email" placeholder="email" id="contact__mail">
+                <label class="contact__label" for="contact__mail"></label>
+              </div>
             </div>
-            <textarea class="contact__textarea" placeholder="message"></textarea>
+            <div class="contact__area contact__area--message">
+              <textarea class="contact__textarea" placeholder="message"></textarea>
+            </div>
             <button class="contact__btn" type="submit">Send message</button>
           </form>
 
           <div class="contact__map">
-
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313401.51147732226!2d-95.59159853934081!3d29.788334290364343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2z0KXigJnRjtGB0YLQvtC9LCDQotC10YXQsNGBLCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sua!4v1613952274827!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
 
         </div>
@@ -627,6 +632,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+      }
+    </script> -->
 
   <script src="js/main.min.js"></script>
 </body>

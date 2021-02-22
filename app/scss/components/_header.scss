@@ -158,8 +158,9 @@
       position: absolute;
       right: 50%;
       left: 50%;
-      width: 1px;
-      height: 39px;
+      top: 6px;
+      width: 2px;
+      height: 38px;
       @extend %background;
       background-image: url('../images/icons/hr-line.svg');
     }

@@ -2,6 +2,14 @@
   padding: 120px 0;
   text-align: center;
 
+  @include phone {
+    padding: 80px 0;
+  }
+
+  @include phone-below {
+    padding: 40px 0;
+  }
+
   &__span {
     display: inline-block;
     @extend %poppins-700;
@@ -14,6 +22,11 @@
     font-size: 35px;
     color: $dark-blue;
     margin-bottom: 70px;
+
+    @include phone {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
   }
 
   &__address {
@@ -23,15 +36,44 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include tablet-desktop {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
-    max-width: 370px;
+    width: 370px;
     padding: 70px 50px;
     background-color: #fbfbfb;
     border: 2px solid $light-blue;
     border-color: transparent;
     transition: border-color .3s linear;
+
+    @include desktop-below {
+      padding: 50px 40px;
+    }
+
+    @include tablet-desktop {
+      width: 400px;
+    }
+
+    @include tablet-landscape {
+      width: 600px;
+    }
+
+    @include phone-below {
+      padding: 30px 20px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include tablet-desktop {
+        margin: 0 auto 30px;
+      }
+    }
 
     &:hover {
       border-color: $light-blue;
@@ -58,6 +100,10 @@
     box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
     transition: background-color .3s linear;
 
+    @include phone {
+      margin-bottom: 40px;
+    }
+
     svg {
       width: 31px;
       height: 44px;
@@ -78,6 +124,10 @@
     line-height: 1.7;
     transition: color .3s linear;
 
+    @include tablet-landscape {
+      display: block;
+    }
+
     &:hover {
       color: $accent;
     }
@@ -85,6 +135,16 @@
 
   &__inner {
     display: flex;
+    padding-top: 120px;
+
+    @include tablet-desktop {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include phone {
+      padding-top: 40px;
+    }
   }
 
   &__form {
@@ -93,17 +153,46 @@
     max-width: 620px;
     width: 100%;
     margin-right: 50px;
-    padding-top: 120px;
+
+    @include tablet-desktop {
+      max-width: 700px;
+      margin: 0 0 35px;
+    }
   }
 
   &__box {
     display: flex;
     justify-content: space-between;
+
+    @include phone {
+      flex-direction: column;
+    }
   }
 
-  &__input {
+  &__group {
+    position: relative;
     max-width: 300px;
-    width: 100%;
+    flex-grow: 1;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include phone {
+        margin: 0;
+      }
+    }
+
+    @include tablet-desktop {
+      max-width: none;
+    }
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__area {
+    position: relative;
   }
 
   &__textarea {
@@ -113,35 +202,39 @@
 
   &__input,
   &__textarea {
-    position: relative;
-    padding: 15px 20px;
+    width: 100%;
+    padding: 15px 45px 15px 20px;
     margin-bottom: 30px;
     background-color: #fafafa;
     border: none;
   }
 
-  &__input--user::after,
-  &__input--mail::after,
-  &__textarea::after {
+  &__group--user::after,
+  &__group--mail::after,
+  &__area::after {
     content: "";
     position: absolute;
-    right: 0;
-    width: 18px;
-    height: 15px;
-    border: 2px solid black;
+    top: 17px;
+    right: 20px;
     background-size: contain;
     background-repeat: no-repeat;
   }
 
-  &__input--user::after {
+  &__group--user::after {
+    width: 18px;
+    height: 15px;
     background-image: url("../images/icons/contacts-user.svg");
   }
 
-  &__input--mail::after {
+  &__group--mail::after {
+    width: 20px;
+    height: 14px;
     background-image: url("../images/icons/contacts-envelope.svg");
   }
 
-  &__textarea::after {
+  &__area--message::after {
+    width: 21px;
+    height: 15px;
     background-image: url("../images/icons/contacts-message.svg");
   }
 
@@ -161,9 +254,27 @@
     background-color: $light-blue;
     transition: color, background-color, .3s linear;
 
+    @include phone-below {
+      margin: 0 auto;
+    }
+
     &:hover {
       color: $dark-blue;
       background-color: $accent;
     }
   }
+
+  &__map {
+    max-width: 500px;
+    width: 100%;
+
+    @include tablet-desktop {
+      max-width: 700px;
+      height: 350px;
+    }
+  }
 }
+
+// #map {
+//   width: 100%;
+// }
