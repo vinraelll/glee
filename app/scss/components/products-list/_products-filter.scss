@@ -44,7 +44,7 @@
       background-color: $banner;
     }
 
-    &:checked + .products-filter__checkbox + .products-filter__count {
+    &:checked + .products-filter__checkbox > .products-filter__count {
       color: $blue-title;
     }
   }

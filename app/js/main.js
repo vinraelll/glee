@@ -23,20 +23,12 @@ $(document).ready(function() {
     }
   });
 
-  // document.querySelector('.products-filter__brand').addEventListener('click', () => {
-  //   console.log('.products-filter__brand')
-  //   document.querySelector('.products-filter__count').classList.toggle('blue-color');
+  const addCart = document.querySelectorAll('.products-list__cart');
+  const hideBtn = document.querySelectorAll('.products-list__btn');
 
-  // const filterCheck = document.getElementsByClassName('products-filter__brand')
-  //   console.log(filterCheck)
-  // const filterColor = document.querySelector('.products-filter__count')
-
-  // const colorToggle = () => {
-  //   filterColor.classList.toggle('blue-color')
-  // }
-
-  // filterCheck.addEventListener('click', colorToggle)
-
+  addCart.addEventListener('click', function () {
+    console.log('hi')
+  })
   
   const sidebar = document.querySelector('.sidebar')
   const sidebarOpen = document.querySelector('.controls__link--tel')

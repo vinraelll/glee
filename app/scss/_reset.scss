@@ -57,6 +57,6 @@ button {
   border: none;
   background-color: transparent;
   outline: transparent;
-  transition: color .4s ease-out;
+  transition: color, background-color, .3s ease-out;
   cursor: pointer;
 }

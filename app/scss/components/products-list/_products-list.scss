@@ -6,8 +6,108 @@
   }
   
   &__content {
-    border: 1px solid black;
     max-width: 860px;
     width: 100%;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__picture {
+    max-width: 360px;
+    width: 100%;
+    margin-right: 60px;
+    padding: 15px;
+    background-color: #fefefe;
+    border: 2px solid #f2f2f2;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__descr {
+    padding: 70px 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #333;
+  }
+
+  &__rateYo {
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    font-size: 30px;
+    color: #333;
+  }
+
+  &__text {
+    color: $blue-title;
+    line-height: 1.9;
+  }
+
+  &__price,
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__wrap:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $light-blue;
+    background-color: #fff;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      fill: $light-blue;
+      transition: fill .3s linear;
+    }
+
+    &:hover svg {
+      fill: #fff;
+    }
+
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+
+  &__btn--hidden {
+    display: none;
+    padding: 15px 55px;
+    text-transform: uppercase;
+    color: #fff;
+    @extend %shadow;
+    border-radius: 5px;
+    background-color: $light-blue;
+    transition: color, background-color, .3s linear;
+
+    &:hover {
+      background-color: $accent;
+      color: $blue-title;
+    }
   }
 }
