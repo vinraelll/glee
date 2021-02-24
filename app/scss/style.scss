@@ -1,6 +1,7 @@
 // main //
 
 @import 'reset';
+// @import 'libs';
 @import 'vars';
 @import 'fonts';
 @import 'keyframes';
@@ -40,3 +41,8 @@
 // contacts //
 
 @import 'components/contacts/contacts';
+
+// products-list //
+
+@import 'components/products-list/products-filter';
+@import 'components/products-list/products-list';

@@ -1,4 +1,42 @@
 $(document).ready(function() {
+
+  // $("#rateYo").rateYo({
+  //   starWidth: "40px"
+  // });
+
+  $('.price-slider').ionRangeSlider({
+    type: "double",
+    min: 0.01,
+    max: 1000.01,
+    from: 200.18,
+    to: 500.65,
+    step: 0.01,
+
+    onStart: function (data) {
+      $('.price-slider__from').text(data.from);
+      $('.price-slider__to').text(data.to);
+    },
+
+    onChange: function (data) {
+      $('.price-slider__from').text(data.from);
+      $('.price-slider__to').text(data.to);
+    }
+  });
+
+  // document.querySelector('.products-filter__brand').addEventListener('click', () => {
+  //   console.log('.products-filter__brand')
+  //   document.querySelector('.products-filter__count').classList.toggle('blue-color');
+
+  // const filterCheck = document.getElementsByClassName('products-filter__brand')
+  //   console.log(filterCheck)
+  // const filterColor = document.querySelector('.products-filter__count')
+
+  // const colorToggle = () => {
+  //   filterColor.classList.toggle('blue-color')
+  // }
+
+  // filterCheck.addEventListener('click', colorToggle)
+
   
   const sidebar = document.querySelector('.sidebar')
   const sidebarOpen = document.querySelector('.controls__link--tel')
