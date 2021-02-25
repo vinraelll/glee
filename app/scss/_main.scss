@@ -68,3 +68,11 @@ body {
 .scrollLock {
   overflow: hidden;
 }
+
+.hidden-btn {
+  display: none !important;
+}
+
+.visible-btn {
+  display: block !important;
+}
