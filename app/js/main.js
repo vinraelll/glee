@@ -23,15 +23,15 @@ $(document).ready(function() {
     }
   });
 
-  const addCart = document.querySelector('.products-list__cart')
-  const addVisible = document.querySelector('.products-list__btn--hidden')
-  const buttons = document.querySelectorAll('.products-list__btn')
-    addCart.addEventListener('click', () => {
-      buttons.forEach((buttons) => {
-        buttons.classList.add('hidden-btn')
-      })
-      addVisible.classList.add('visible-btn')
-    })
+  // const addCart = document.querySelector('.products-list__cart')
+  // const addVisible = document.querySelector('.products-list__btn--hidden')
+  // const buttons = document.querySelectorAll('.products-list__btn')
+  //   addCart.addEventListener('click', () => {
+  //     buttons.forEach((buttons) => {
+  //       buttons.classList.add('hidden-btn')
+  //     })
+  //     addVisible.classList.add('visible-btn')
+  //   })
 
   
   const sidebar = document.querySelector('.sidebar')

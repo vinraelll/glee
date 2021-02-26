@@ -1,0 +1,35 @@
+.pagination {
+  display: flex;
+  padding-top: 70px;
+  // line-height: 1.9;
+  color: $blue-title;
+
+  ul.pagination__list {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  &__item,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $light-blue;
+    background-color: #fff;
+    @extend %shadow;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    padding: 15px 20px;
+    transition: color, background-color, .3s linear;
+
+    &:hover {
+      color: #fff;
+      background-color: $light-blue;
+    }
+  }
+}

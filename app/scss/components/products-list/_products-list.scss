@@ -19,12 +19,22 @@
   }
 
   &__picture {
+    position: relative;
     max-width: 360px;
     width: 100%;
     margin-right: 60px;
-    padding: 15px;
     background-color: #fefefe;
     border: 2px solid #f2f2f2;
+  }
+
+  &__ref {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    padding: 50px;
   }
 
   &__image {
@@ -78,6 +88,7 @@
     height: 50px;
     border: 1px solid $light-blue;
     background-color: #fff;
+    @extend %shadow;
 
     & svg {
       width: 20px;
