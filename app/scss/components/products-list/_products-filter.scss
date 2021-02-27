@@ -4,8 +4,88 @@
   padding: 5px 0;
   margin-right: 30px;
 
+  @include desktop-below {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @include tablet-landscape {
+    max-width: 700px;
+  }
+
   &__item {
     margin-bottom: 60px;
+
+    @include desktop-below {
+      &--cat {
+        width: 100%;
+        max-width: 430px;
+        order: 1;
+      }
+
+      &--price {
+        width: 100%;
+        order: 3;
+      }
+      
+      &--brand{
+        width: 100%;
+        max-width: 430px;
+        order: 2;
+      }
+      
+      &--recent {
+        width: 100%;
+        order: 4;
+      }
+    }
+
+    @include tablet-landscape {
+      &--cat {
+        width: 100%;
+        max-width: none;
+        order: 1;
+      }
+
+      &--price {
+        width: 100%;
+        order: 3;
+      }
+      
+      &--brand{
+        width: 100%;
+        max-width: none;
+        order: 2;
+      }
+      
+      &--recent {
+        width: 100%;
+        order: 4;
+      }
+
+      @include phone {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__block {
+    @include desktop-below {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include tablet-portrait {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @include phone {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -88,9 +168,20 @@
   }
 
   &__wrapper {
-
     &:not(:last-child) {
       margin-bottom: 24px;
+    }
+
+    @include tablet-portrait {
+      &:not(:last-child) {
+        margin: 0 20px 40px 0;
+      }
+    }
+
+    @include phone {
+      &:not(:last-child) {
+        margin: 0 0 20px 0;
+      }
     }
   }
 
@@ -127,8 +218,7 @@
     }
   }
 
-  &__heading,
-  .rateyo {
+  &__heading {
     font-size: 14px;
     margin-bottom: 12px;
   }
@@ -181,8 +271,14 @@
   display: none !important;
 }
 
-.rateyo {
-  width: 90px;
-  height: 10px;
-  border: 1px solid black;
+.rateyo-min {
+  margin-bottom: 12px;
+}
+
+.rateyo-lg {
+  margin-bottom: 20px;
+}
+
+div.jq-ry-container {
+  padding: 0;
 }

@@ -1,8 +1,12 @@
 .pagination {
   display: flex;
   padding-top: 70px;
-  // line-height: 1.9;
   color: $blue-title;
+
+  @include desktop-below {
+    max-width: max-content;
+    margin: 0 auto;
+  }
 
   ul.pagination__list {
     display: flex;
@@ -27,9 +31,14 @@
     padding: 15px 20px;
     transition: color, background-color, .3s linear;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: #fff;
       background-color: $light-blue;
+    }
+
+    @include phone-below {
+      padding: 10px 15px;
     }
   }
 }

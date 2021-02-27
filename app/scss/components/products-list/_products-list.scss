@@ -1,13 +1,26 @@
 .products-list {
   padding: 120px 0;
 
+  @include phone {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: flex;
+
+    @include desktop-below {
+      flex-direction: column;
+    }
   }
   
   &__content {
     max-width: 860px;
     width: 100%;
+
+    @include tablet-portrait {
+      max-width: 600px;
+      margin: 0 auto; 
+    }
   }
 
   &__item {
@@ -15,6 +28,10 @@
 
     &:not(:last-child) {
       margin-bottom: 40px;
+    }
+
+    @include tablet-portrait {
+      flex-direction: column;
     }
   }
 
@@ -25,6 +42,17 @@
     margin-right: 60px;
     background-color: #fefefe;
     border: 2px solid #f2f2f2;
+    padding: 50px;
+
+    @include tablet-landscape {
+      margin-right: 20px;
+      padding: 30px;
+    }
+
+    @include tablet-portrait {
+      max-width: none;
+      margin: 0 auto 20px;
+    }
   }
 
   &__ref {
@@ -35,6 +63,10 @@
     bottom: 0;
     display: block;
     padding: 50px;
+
+    @include tablet-landscape {
+      padding: 30px;
+    }
   }
 
   &__image {
@@ -45,12 +77,26 @@
 
   &__descr {
     padding: 70px 0;
+
+    @include big-desktop {
+      padding: 0;
+    }
   }
 
   &__title {
+    display: inline-block;
     margin-bottom: 20px;
     font-size: 40px;
     color: #333;
+    transition: color .3s linear;
+
+    &:hover {
+      color: $accent;
+    }
+
+    @include tablet-landscape {
+      font-size: 30px;
+    }
   }
 
   &__rateYo {
@@ -60,6 +106,10 @@
   &__price {
     font-size: 30px;
     color: #333;
+
+    @include tablet-landscape {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -70,6 +120,10 @@
   &__price,
   &__text {
     margin-bottom: 30px;
+
+    @include tablet-landscape {
+      margin-bottom: 20px;
+    }
   }
 
   &__buttons {

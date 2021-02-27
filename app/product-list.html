@@ -86,16 +86,16 @@
             <a class="nav__link" href="#">Pages +</a>
             <ul class="nav__dropdown dropdown">
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Lorem</a>
+                <a class="dropdown__link" href="product-list.html">Products List</a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Ipsum</a>
+                <a class="dropdown__link" href="product-grid.html">Products Grid</a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Dolor</a>
+                <a class="dropdown__link" href="blog.html">Blog</a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">Sit Amet</a>
+                <a class="dropdown__link" href="blog-details.html">Blog Details</a>
               </li>
             </ul>
           </li>
@@ -338,7 +338,7 @@
         <div class="products-list__inner">
           <aside class="products-filter">
 
-            <div class="products-filter__item">
+            <div class="products-filter__item products-filter__item--cat">
               <h3 class="products-filter__title">
                 Category
               </h3>
@@ -376,7 +376,7 @@
               </form>
             </div>
           
-            <div class="products-filter__item">
+            <div class="products-filter__item products-filter__item--price">
               <h3 class="products-filter__title">
                 Price
               </h3>
@@ -391,7 +391,7 @@
               </div>
             </div>
           
-            <div class="products-filter__item">
+            <div class="products-filter__item products-filter__item--brand">
               <h3 class="products-filter__title">
                 Brand
               </h3>
@@ -434,70 +434,75 @@
               </form>
             </div>
           
-            <div class="products-filter__item">
+            <div class="products-filter__item products-filter__item--recent">
               <h3 class="products-filter__title">
                 Recent products
               </h3>
-              <div class="products-filter__wrapper">
-                <div class="products-filter__box">
-                  <a class="products-filter__image" href="#">
-                    <img class="products-filter__img" src="images/products/product-1.png" alt="big white armchair">
-                  </a>
-                  <div class="products-filter__decsr">
-                    <a class="products-filter__heading" href="#">
-                      Template Armchair
+
+              <div class="products-filter__block">
+                <div class="products-filter__wrapper">
+                  <div class="products-filter__box">
+                    <a class="products-filter__image" href="#">
+                      <img class="products-filter__img" src="images/products/product-1.png" alt="big white armchair">
                     </a>
-                    <div class="rateyo" id="rateYo"></div>
-                    <div class="products-filter__price">23$</div>
+                    <div class="products-filter__decsr">
+                      <a class="products-filter__heading" href="#">
+                        Template Armchair
+                      </a>
+                      <div class="rateyo-min" data-rateyo-rating="4.5"></div>
+                      <div class="products-filter__price">23$</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="products-filter__wrapper">
+                  <div class="products-filter__box">
+                    <a class="products-filter__image" href="#">
+                      <img class="products-filter__img" src="images/products/product-2.png" alt="big white armchair">
+                    </a>
+                    <div class="products-filter__decsr">
+                      <a class="products-filter__heading" href="#">
+                        Deluxe Original
+                      </a>
+                      <div class="rateyo-min" data-rateyo-rating="3"></div>
+                      <div class="products-filter__price">47$</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="products-filter__wrapper">
+                  <div class="products-filter__box">
+                    <a class="products-filter__image" href="#">
+                      <img class="products-filter__img" src="images/products/product-9.png" alt="big white armchair">
+                    </a>
+                    <div class="products-filter__decsr">
+                      <a class="products-filter__heading" href="#">
+                        Template Lamp
+                      </a>
+                      <div class="rateyo-min" data-rateyo-rating="4"></div>
+                      <div class="products-filter__price">56$</div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="products-filter__wrapper">
-                <div class="products-filter__box">
-                  <a class="products-filter__image" href="#">
-                    <img class="products-filter__img" src="images/products/product-2.png" alt="big white armchair">
-                  </a>
-                  <div class="products-filter__decsr">
-                    <a class="products-filter__heading" href="#">
-                      Deluxe Original
-                    </a>
-                    <div class="rateyo" id="rateYo"></div>
-                    <div class="products-filter__price">47$</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="products-filter__wrapper">
-                <div class="products-filter__box">
-                  <a class="products-filter__image" href="#">
-                    <img class="products-filter__img" src="images/products/product-9.png" alt="big white armchair">
-                  </a>
-                  <div class="products-filter__decsr">
-                    <a class="products-filter__heading" href="#">
-                      Template Lamp
-                    </a>
-                    <div class="rateyo" id="rateYo"></div>
-                    <div class="products-filter__price">56$</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </aside>
           
           <div class="products-list__container">
             <ul class="products-list__content">
+
               <li class="products-list__item">
                 <div class="products-list__picture">
-                  <a class="products-list__ref" href="#">
-                    <img class="products-list__image" src="images/products/product-1.png" alt="" >
-                  </a>
+                  <!-- <a class="products-list__ref" href="#"> -->
+                    <img class="products-list__image" src="images/products/product-17.png" alt="" >
+                  <!-- </a> -->
                 </div>
                 <div class="products-list__descr">
                   <div class="products-list__title">
-                    <p>Wooden Radio</p>
+                    <a href="#">Wooden Radio</a>
                   </div>
-                  <div class="rateYo" id="rateYo"></div>
+                  <div class="rateyo-lg" data-rateyo-rating="3"></div>
                   <div class="products-list__price">
                     23$
                   </div>
@@ -533,15 +538,15 @@
             
               <li class="products-list__item">
                 <div class="products-list__picture">
-                  <a class="products-list__ref" href="#">
-                    <img class="products-list__image" src="images/products/product-4.png" alt="" >
-                  </a>
+                  <!-- <a class="products-list__ref" href="#"> -->
+                    <img class="products-list__image" src="images/products/product-18.png" alt="" >
+                  <!-- </a> -->
                 </div>
                 <div class="products-list__descr">
                   <div class="products-list__title">
-                    <p>Wooden Radio</p>
+                    <a href="#">Armchair Elite</a>
                   </div>
-                  <div class="rateYo" id="rateYo"></div>
+                  <div class="rateyo-lg" data-rateyo-rating="5"></div>
                   <div class="products-list__price">
                     23$
                   </div>
@@ -577,15 +582,15 @@
             
               <li class="products-list__item">
                 <div class="products-list__picture">
-                  <a class="products-list__ref" href="#">
-                    <img class="products-list__image" src="images/products/product-3.png" alt="" >
-                  </a>
+                  <!-- <a class="products-list__ref" href="#"> -->
+                    <img class="products-list__image" src="images/products/product-19.png" alt="" >
+                  <!-- </a> -->
                 </div>
                 <div class="products-list__descr">
                   <div class="products-list__title">
-                    <p>Wooden Radio</p>
+                    <a href="#">Deluxe Notiore</a>
                   </div>
-                  <div class="rateYo" id="rateYo"></div>
+                  <div class="rateyo-lg data-rateyo-rating="2""></div>
                   <div class="products-list__price">
                     23$
                   </div>
@@ -621,15 +626,15 @@
             
               <li class="products-list__item">
                 <div class="products-list__picture">
-                  <a class="products-list__ref" href="#">
-                    <img class="products-list__image" src="images/products/product-2.png" alt="" >
-                  </a>
+                  <!-- <a class="products-list__ref" href="#"> -->
+                    <img class="products-list__image" src="images/products/product-20.png" alt="" >
+                  <!-- </a> -->
                 </div>
                 <div class="products-list__descr">
                   <div class="products-list__title">
-                    <p>Wooden Radio</p>
+                    <a href="#">Mercator Agriel</a>
                   </div>
-                  <div class="rateYo" id="rateYo"></div>
+                  <div class="rateyo-lg" data-rateyo-rating="4"></div>
                   <div class="products-list__price">
                     23$
                   </div>
@@ -662,6 +667,7 @@
                   </ul>
                 </div>
               </li>
+
             </ul>
 
             <div class="pagination">
@@ -672,9 +678,9 @@
                   </a>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#">
+                  <span class="pagination__link active">
                     2
-                  </a>
+                  </span>
                 </li>
                 <li class="pagination__item">
                   <a class="pagination__link" href="#">

@@ -23,7 +23,7 @@ function styles() {
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
     'node_modules/@fortawesome/fontawesome-free/css/all.css',
     'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
-    // 'node_modules/rateyo/lib/iife/rateyo.css',
+    'node_modules/rateyo/src/jquery.rateyo.css',
   ])  
   .pipe(scss({outputStyle: 'compressed'}))
   .pipe(concat('style.min.css'))
@@ -44,7 +44,7 @@ function scripts() {
     'node_modules/@fortawesome/fontawesome-free/js/all.js',
     'node_modules/mixitup/dist/mixitup.js',
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-    // 'node_modules/rateyo/lib/iife/rateyo.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
