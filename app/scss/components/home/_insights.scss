@@ -148,38 +148,6 @@
     }
   }
 
-  &__date {
-    margin-right: 20px;
-  }
-
-  &__date, 
-  &__author {
-    position: relative;
-    padding-left: 20px;
-    transition: color .3s linear;
-
-    &:hover {
-      color: $accent;
-    }
-  }
-
-  &__date,
-  &__author {
-    &::before {
-      position: absolute;
-      left: 0;
-      font-family: 'icomoon';
-    }
-  }
-
-  &__date::before {
-    content: "\e953";
-  }
-
-  &__author::before {
-    content: "\e976";
-  }
-
   &__bg {
     position: absolute;
     left: 0;
@@ -222,3 +190,43 @@
 
   }
 } 
+
+.page {
+  &__date {
+    margin-right: 20px;
+
+    &.blog__date {
+      @include phone-below {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__date, 
+  &__author {
+    position: relative;
+    padding-left: 20px;
+    transition: color .3s linear;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__date,
+  &__author {
+    &::before {
+      position: absolute;
+      left: 0;
+      font-family: 'icomoon';
+    }
+  }
+
+  &__date::before {
+    content: "\e953";
+  }
+
+  &__author::before {
+    content: "\e976";
+  }
+}

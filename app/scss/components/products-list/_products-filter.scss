@@ -4,11 +4,6 @@
   padding: 5px 0;
   margin-right: 30px;
 
-  &.blog-filter {
-    max-width: 270px;
-    margin-right: 0;
-  }
-
   @include desktop-below {
     max-width: 900px;
     margin: 0 auto;

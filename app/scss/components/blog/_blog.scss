@@ -4,13 +4,32 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include desktop-below {
+      justify-content: center;
+    }
+
+    @include tablet-desktop {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__content {
     max-width: 830px;
+
+    @include desktop-below {
+      max-width: 620px;
+      margin-right: 50px;
+    }
+
+    @include tablet-desktop {
+      max-width: 700px;
+      margin-right: 0;
+    }
   }
 
-  &__item {
+  &__item:not(:last-child) {
     margin-bottom: 50px;
   }
 
@@ -27,37 +46,83 @@
     text-transform: uppercase;
     color: #fff;
     background-color: $light-blue;
+
+    @include phone-below {
+      width: 100%;
+      padding: 15px;
+    }
+
+    @include phone {
+      display: flex;
+      justify-content: space-around;
+    }
   }
 
   &__title {
     font-size: 36px;
     font-weight: 400;
     color: #333;
+
+    @include phone {
+      font-size: 30px;
+    }
+  }
+
+  &__link {
+    transition: color .3s linear;
+
+    &:hover {
+      color: $accent;
+    }
   }
 
   &__text {
     line-height: 1.9;
+
+    @include phone {
+      font-size: 14px;
+    }
   }
 
   &__banner, 
   &__title, 
   &__text {
     margin-bottom: 40px;
+
+    @include phone {
+      margin-bottom: 30px;
+    }
   }
 
   &__more {
+    position: relative;
     display: block;
     max-width: max-content;
     padding: 20px 85px 20px 20px;
     color: $light-blue;
     background-color: transparent;
-    border: 1px solid $light-blue;
+    border: 2px solid $light-blue;
     transition: color, background-color, border, .3s linear;
 
     &:hover {
       background-color: $accent;
       color: $blue-title;
-      border: 1px solid $accent;
+      border: 2px solid $accent;
+    }
+
+    &:hover svg {
+      fill: $blue-title;
+    }
+
+    & svg {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 9px;
+      fill: $light-blue;
+      transition: fill .3s linear;
     }
   }
 
@@ -81,7 +146,7 @@
     align-items: center;
     position: absolute;
     right: 0;
-    width: 40px;
+    width: 50px;
     background-color: $banner;
 
     & svg {
@@ -91,15 +156,76 @@
     }
 
     &:hover {
+      border: 2px solid $accent;
       background-color: $accent;
     }
   }
 
   &__input,
   &__btn {
-    height: 40px;
-    border: 1px solid $banner;
+    height: 50px;
+    border: 2px solid $banner;
     border-radius: 5px;
   }
+
+  &__recent-wrapper {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__recent-image {
+    margin-right: 20px;
+  }
+
+  &__recent-img {
+    width: 70px;
+    height: 70px;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  &__recent-heading {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 5px;
+    transition: color .3s linear;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__recent-date {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #9a9a9a;
+  }
+}
+
+.blog-filter {
+  max-width: 280px;
+  margin-right: 0;
+  padding: 0;
+
+  @include tablet-desktop {
+    max-width: 700px;
+    width: 100%;
+    padding-top: 70px;
+  }
+
+  &__item {
+
+    &--cat {
+      margin-bottom: 50px;
+    }
+  }
+
+    
 }
 
