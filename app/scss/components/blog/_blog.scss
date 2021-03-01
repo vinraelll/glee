@@ -1,0 +1,105 @@
+.blog {
+  padding: 120px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 830px;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__banner {
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $light-blue;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 400;
+    color: #333;
+  }
+
+  &__text {
+    line-height: 1.9;
+  }
+
+  &__banner, 
+  &__title, 
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__more {
+    display: block;
+    max-width: max-content;
+    padding: 20px 85px 20px 20px;
+    color: $light-blue;
+    background-color: transparent;
+    border: 1px solid $light-blue;
+    transition: color, background-color, border, .3s linear;
+
+    &:hover {
+      background-color: $accent;
+      color: $blue-title;
+      border: 1px solid $accent;
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  &__input {
+    max-width: 100%;
+    width: 100%;
+    padding: 5px 50px 5px 10px;
+    outline: transparent;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 40px;
+    background-color: $banner;
+
+    & svg {
+      width: 18px;
+      height: 18px;
+      fill: $blue-title;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
+  }
+
+  &__input,
+  &__btn {
+    height: 40px;
+    border: 1px solid $banner;
+    border-radius: 5px;
+  }
+}
+
