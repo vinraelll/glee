@@ -78,6 +78,10 @@
         transform: scale(1.05);
       }
     }
+
+    &.product-details__wrap {
+      box-shadow: 0 0 15px 0 rgba(92, 88, 88, 0.05);
+    }
   }
 
   &__info {

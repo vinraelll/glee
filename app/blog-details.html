@@ -106,7 +106,7 @@
             <a class="nav__link" href="#">News</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="contacts.html">Contact</a>
+            <a class="nav__link" href="contacts.html">Contacts</a>
           </li>
         </ul>
 
@@ -213,7 +213,7 @@
         <a class="sidebar__ref" href="#">News</a>
       </li>
       <li class="sidebar__item">
-        <a class="sidebar__ref" href="contacts.html">Contact</a>
+        <a class="sidebar__ref" href="commentss.html">comments</a>
       </li>
     </ul>
 
@@ -396,8 +396,147 @@
                   </p>
                 </div>
               </div>
+
+              <div class="blog-details__info">
+
+                <div class="blog-details__owner">
+                  <img class="blog-details__photo" src="images/blog/blog-author.png" alt="our designer">
+                  <div class="blog-details__flexbox">
+                    <a class="blog-details__name" href="#">Mark N. Hernandez</a>
+                    <p class="blog-details__position">Designer</p>
+                  </div>
+                </div>
+
+                <div class="blog-details__social">
+                  <div class="blog-details__tags">
+                    <span class="blog-details__tags-span">Tags:</span>
+                    <a class="blog-details__tags-link" href="#">All,</a>
+                    <a class="blog-details__tags-link" href="#">Trending</a>
+                  </div>
+                  <div class="blog-details__share">
+                    <span class="blog-details__share-span">Share:</span>
+                    <a class="blog-details__share-link" href="#">
+                      <svg class="icon">
+                        <use xlink:href="#facebook"></use>
+                      </svg>
+                      <div class="sr-only">facebook</div>
+                    </a>
+                    <a class="blog-details__share-link" href="#">
+                      <svg class="icon">
+                        <use xlink:href="#twitter"></use>
+                      </svg>
+                      <div class="sr-only">twitter</div>
+                    </a>
+                    <a class="blog-details__share-link" href="#">
+                      <svg class="icon">
+                        <use xlink:href="#instagram"></use>
+                      </svg>
+                      <div class="sr-only">instagram</div>
+                    </a>
+                    <a class="blog-details__share-link" href="#">
+                      <svg class="icon">
+                        <use xlink:href="#google"></use>
+                      </svg>
+                      <div class="sr-only">google+</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            <div class="comments">
+              <div class="comments__count">
+                <span class="comments__count-span">3</span> 
+                Comments
+              </div>
+
+              <ul class="comments__list">
+                <li class="comments__item">
+                  <img class="comments__img" src="images/blog/comments-1.png" alt="redhair women">
+                  <div class="comments__info">
+                    <div class="comments__name">
+                      Delores G. Roberts
+                      <a class="comments__date" href="#">Add 11 Oct 2020</a>
+                    </div>
+                    <div class="comments__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices 
+                      </p>
+                    </div>
+                    <button class="comments__reply">
+                      Reply
+                      <svg class="icon">
+                        <use xlink:href="#slider-link-arrow"></use>
+                      </svg>
+                      <div class="sr-only">Answer the comment</div>
+                    </button>
+                  </div>
+                </li>
+
+                <li class="comments__item comments__item--reply">
+                  <img class="comments__img" src="images/blog/comments-2.png" alt="redhair women">
+                  <div class="comments__info">
+                    <div class="comments__name">
+                      Delores G. Roberts
+                      <a class="comments__date" href="#">Add 11 Oct 2020</a>
+                    </div>
+                    <div class="comments__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices 
+                      </p>
+                    </div>
+                    <button class="comments__reply">
+                      Reply
+                      <svg class="icon">
+                        <use xlink:href="#slider-link-arrow"></use>
+                      </svg>
+                      <div class="sr-only">Answer the comment</div>
+                    </button>
+                  </div>
+                </li>
+
+                <li class="comments__item">
+                  <img class="comments__img" src="images/blog/comments-3.png" alt="redhair women">
+                  <div class="comments__info">
+                    <div class="comments__name">
+                      Delores G. Roberts
+                      <a class="comments__date" href="#">Add 11 Oct 2020</a>
+                    </div>
+                    <div class="comments__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices 
+                      </p>
+                    </div>
+                    <button class="comments__reply">
+                      Reply
+                      <svg class="icon">
+                        <use xlink:href="#slider-link-arrow"></use>
+                      </svg>
+                      <div class="sr-only">Answer the comment</div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="comments__form-title">Leave a comment</div>
+
+              <form class="comments__form">
+                <div class="comments__box">
+                  <div class="comments__group comments__group--user">
+                    <input class="comments__input" type="text" placeholder="name" id="comments__user">
+                    <label class="comments__label" for="comments__user"></label>
+                  </div>
+                  <div class="comments__group comments__group--mail">
+                    <input class="comments__input" type="email" placeholder="email" id="comments__mail">
+                    <label class="comments__label" for="comments__mail"></label>
+                  </div>
+                </div>
+                <div class="comments__area comments__area--message">
+                  <textarea class="comments__textarea" placeholder="comment"></textarea>
+                </div>
+                <button class="comments__btn" type="submit">Post comment</button>
+              </form>
+            </div>
           </div>
           <aside class="blog-filter">
 
@@ -564,7 +703,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__content">
-        <address class="footer__contacts">
+        <address class="footer__commentss">
           <a class="footer__logo logo" href="#">
             <img class="logo__img" src="images/main-logo.png"
               alt="main logo of internet store glee, style blue letters on pink background" />
@@ -581,7 +720,7 @@
           </div>
           <div>
             Email:
-            <a class="footer__email" href="mailto:contact@Glee.com">contact@Glee.com</a>
+            <a class="footer__email" href="mailto:comments@Glee.com">comments@Glee.com</a>
           </div>
         </address>
 
@@ -599,7 +738,7 @@
               <a class="footer__link" href="blog.html"> Our Blog </a>
             </li>
             <li class="footer__part">
-              <a class="footer__link" href="contacts.html"> Contact Us </a>
+              <a class="footer__link" href="commentss.html"> comments Us </a>
             </li>
             <li class="footer__part">
               <a class="footer__link" href="terms&conditions.html"> Terms & Condition </a>
@@ -658,7 +797,7 @@
             <a class="footer__ref" href="blog.html">Blog</a>
           </li>
           <li class="footer__roll">
-            <a class="footer__ref" href="contacts.html">Contact</a>
+            <a class="footer__ref" href="commentss.html">comments</a>
           </li>
         </ul>
       </div>
