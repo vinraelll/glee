@@ -1,0 +1,41 @@
+.banner {
+  padding: 35px 10px;
+  text-align: center;
+  background-color: $banner;
+
+  &__title {
+    @extend %rubik-300;
+    font-size: 36px;
+    color: #222933;
+    margin-bottom: 5px;
+  }
+}
+
+.breadcrumbs {
+  display: inline-flex;
+  @extend %rubik-400;
+  font-size: 14px;
+  color: #888c91;
+
+  &__item {
+    position: relative;
+    padding-right: 20px;
+    transition: color .3s linear;
+
+    &:last-child {
+      color: $accent;
+      padding-right: 0;
+    }
+
+    &:hover:not(:last-child) {
+      color: $dark-title;
+    }
+
+    &:not(:last-child)::after {
+      content: "/";
+      position: absolute;
+      right: 7px;
+      color: #888c91;
+    }
+  }
+}

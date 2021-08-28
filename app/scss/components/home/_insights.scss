@@ -1,0 +1,232 @@
+.insights {
+  position: relative;
+  @extend %DMSans-700;
+  color: $dark-title;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+
+    @include phone {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+
+    @include tablet-portrait {
+      margin: 0 20px 10px 0;
+      font-size: 30px;
+    }
+
+    @include phone {
+      width: 100%;
+      margin: 0 auto 10px;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 12px 20px 12px 12px;
+    color: inherit;
+    transition: color .3s linear;
+
+    @include tablet-portrait {
+      padding: 8px 20px 7px 0;
+    }
+
+    @include phone {
+      margin: 0 auto;
+      padding: 6px 20px 3px 0;
+    }
+
+    &::after {
+      content: "\ea42";
+      position: absolute;
+      right: 0;
+      font-family: 'icomoon';
+    }
+  }
+
+  &__link, 
+  &__text {
+    transition: color .3s linear;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet-desktop {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    width: 31%;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    background: #fff;
+    @extend %shadow;
+
+    @include tablet-desktop {
+      width: calc(50% - 15px);
+      margin-bottom: 20px;
+    }
+
+    @include tablet-portrait {
+      width: calc(100% - 15px);
+      
+    }
+  }
+
+  &__image {
+    height: 250px;
+  }
+
+  &__img {
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    outline: transparent;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px;
+  }
+
+  &__category {
+    max-width: max-content;
+    padding: 10px 30px;
+    border-radius: 25px;
+    @extend %poppins-700;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: $light-blue;
+    transform: translateY(-50%);
+    transition: all .3s linear;
+
+    &:hover {
+      color: $blue-title;
+      background-color: $accent;
+    }
+  }
+
+  &__text {
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__info {
+    padding-top: 20px;
+    display: flex;
+    border-top: 1px solid #e0e0e0;
+    @extend %rubik-400;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #222933;
+
+    @include phone {
+      font-size: 10px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 440px;
+    background-color: #fdf6ef;
+    transform: translateY(-102%);
+    z-index: -1;
+
+    @include tablet-desktop {
+      height: 360px;
+      transform: translateY(-105%);
+    }
+
+    @include tablet-portrait {
+      height: 340px;
+    }
+
+    @include phone {
+      height: 358px;
+    }
+  }
+}
+
+.partners {
+  &__item {
+    width: 20%;
+  }
+
+  &__wrap {
+    display: flex;
+    height: 85px;
+    padding: 135px 0;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet-desktop {
+      padding: 100px 0;
+    }
+
+  }
+} 
+
+.page {
+  &__date {
+    margin-right: 20px;
+
+    &.blog__date {
+      @include phone-below {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__date, 
+  &__author {
+    position: relative;
+    padding-left: 20px;
+    transition: color .3s linear;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__date,
+  &__author {
+    &::before {
+      position: absolute;
+      left: 0;
+      font-family: 'icomoon';
+    }
+  }
+
+  &__date::before {
+    content: "\e953";
+  }
+
+  &__author::before {
+    content: "\e976";
+  }
+}

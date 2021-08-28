@@ -1,0 +1,190 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  padding: 25px 20px;
+  overflow-y: auto;
+  color: #565872;
+  line-height: 2;
+  box-shadow: -5px 0 20px -5px rgba(0, 0, 0, .5);
+  z-index: 3333;
+  background-color: #fff;
+  transform: translateX(110%);
+  transition: all .3s cubic-bezier(0.785, 0.135, 0.15, .86);
+
+  &.visible {
+    transform: translateX(0%);
+  }
+
+  &__body {
+    @include desktop-below {
+      display: none;
+    }
+  }
+
+  & address {
+    font-style: normal;
+  }
+
+  &__close {
+    padding-bottom: 15px;
+    margin-left: -6px;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &:hover svg {
+      fill: red;
+    }
+  }
+
+  &__btn svg {
+    width: 15px;
+    height: 15px; 
+    transition: fill .3s linear;
+  }
+
+  &__logo {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__part {
+    padding-top: 30px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @extend %DMSans-700;
+    font-size: 20px;
+    color: $accent;
+  }
+
+  &__google {
+    padding-bottom: 5px;
+  }
+
+  &__google,
+  &__links {
+    border-bottom: 1px solid #FFF;
+    transition: border-bottom .3s linear;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &__links {
+    display: inline-block;
+  }
+
+  &__photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 30px 0;
+  }
+  
+  & ul.sidebar__photo {
+    padding: 30px 0;
+  }
+
+  &__photo li {
+    padding: 10px;
+    background-color: rgba(182, 182, 182, 0.2);
+  }
+
+  &__img {
+    height: 55px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social li {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color .3s linear;
+
+    &:hover {
+      background-color: $accent;
+    }
+  }
+
+  &__link svg {
+    fill: #fff;
+    width: 18px;
+    height: 18px;
+  }
+
+  // sidebar menu styles //
+
+  &__menu {
+    display: none;
+
+    @include desktop-below {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    font-weight: 700;
+    color: #101a23;
+    text-transform: uppercase;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__item svg {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 10px;
+    transition: fill .3s linear;
+  }
+
+  &__item:hover svg {
+    fill: $accent;
+  }
+
+  &__ref {
+    display: block;
+    padding: 10px 0;
+    transform: translateX(0%);
+    transition: all .3s linear;
+
+    &:hover {
+      transform: translateX(2%);
+      color: $accent;
+    }
+  }
+}
+  .sidedrop {
+    &__item {
+      position: absolute;
+      visibility: hidden;
+    }
+}

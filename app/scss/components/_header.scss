@@ -1,10 +1,18 @@
 .header {
-  padding: 50px 0px;
+  padding: 50px 0;
+
+  @include phone {
+    padding: 30px 0;
+  }
+}
+
+.logo-container {
+  width: 100%;
+  max-width: 200px;
 }
 
 .logo {
-  width: 100%;
-  max-width: 290px;
+  display: inline-block;
 }
 
 .nav {
@@ -15,20 +23,24 @@
   &__menu {
     display: flex;
     justify-content: space-between;
+
+    @include desktop-below {
+      display: none;
+    }
   }
 
   &__item {
     position: relative;
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 5px;
     }
 
     &:hover .dropdown {
         visibility: visible; 
         opacity: 1;
         transform: translateY(0%);
-        transition-delay: 0s, 0s, 0.3s;
+        transition-delay: 0;
         background-color: $blue-title;
     }
   }
@@ -42,7 +54,7 @@
     font-size: 15px;
     line-height: 1;
     color: $dark-blue;
-    transition: color 0.5s ease-out;
+    transition: color .5s ease-out;
   }
 
   &__link.active {
@@ -54,21 +66,21 @@
     color: #fff;
   }
   
-  &__link:after {
+  &__link::after {
     content: ".";
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
     width: 0%;
-    color: transparent;
     height: 1px;
+    margin: auto;
+    color: transparent;
   }
   
-  &__link:hover:after {
+  &__link:hover::after {
     z-index: -10;
-    animation: fill 0.5s forwards;
+    animation: fill .5s forwards;
     opacity: 1;
   }
 }
@@ -83,7 +95,7 @@
   visibility: hidden; 
   transform: translateY(-3em);
   z-index: 2222;
-  transition: all 0.3s ease-in-out;
+  transition: color, background-color, .3s ease-in-out;
 
   &__item {
     position: relative;
@@ -96,12 +108,12 @@
     @extend %DMSans-700;
     font-size: 15px;
     color: #ddd;
-    transition: color 0.3s ease-in-out;
+    transition: color, background-color, .3s ease-in-out;
   }
   
   &__link:hover {
-    color: rgba(0,223,252,1);
-    background: rgba(0, 235, 252, 0.02);
+    color: rgba(0, 223, 252, 1);
+    background: rgba(0, 235, 252, .02);
   }
 }
 
@@ -113,93 +125,138 @@
   max-width: 320px;
   width: 100%;
 
+  @include tablet-portrait {
+    max-width: 270px;
+  }
+
+  @include phone {
+    width: auto;
+  }
+
+  ul {
+    padding: 14px 30px 9px;
+  }
+
   &__inner {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 180px;
-    padding: 9px 40px;
     width: 100%;
     height: 50px;
-    margin: 0px 20px;
+    margin: 0 20px;
     background-color: $accent;
     border-radius: 25px;
+
+    @include phone {
+      display: none;
+    }
 
     &::after {
       content: "";
       position: absolute;
       right: 50%;
       left: 50%;
-      width: 1px;
-      height: 39px;
+      top: 6px;
+      width: 2px;
+      height: 38px;
       @extend %background;
       background-image: url('../images/icons/hr-line.svg');
     }
   }
 
-  &__link {
+  &__item {
+    display: inline-block;
     position: relative;
   }
 
-  &__link--search,
-  &__link--tel {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+  &__link {
+    display: inline-block;
+    padding: 8px 10px;
+    transition: all .3s ease-in;
   }
 
   &__link--search {
     background-color: #edf1f4;
-  }
+    z-index: 200;
+    position: relative;
+  
+      &:hover {
+        background-color: $accent;
+      }
+    }
+  
 
   &__link--tel {
     background-color: #a3bbc8;
+
+    svg {
+      width: 30px;
+      height: 25px;
+      fill: #fff;
+      transition: fill .3s ease-in;
+    }
+
+    &:hover svg {
+      fill: $dark-blue;
+    }
+  }
+
+  &__link--search,
+  &__link--tel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+    }
   }
 
   &__link--heart,
-  &__link--cart {
-    top: -8px;
+  &__link--search {
+    color: $dark-blue;
   }
 
-  &__link--search::after,
-  &__link--heart::after,
-  &__link--cart::after,
-  &__link--tel::after {
-    content: "";
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    @extend %background;
-    background-size: auto;
+  &__link--heart {
+    &:hover {
+      color: #fff;
+    }
+
+    &:hover span {
+      transform: scale(1.3);
+      color: $accent;
+    }
   }
 
-  &__link--tel::after {
-    background-image: url('../images/icons/dots.svg');
-  }
+  &__link--cart,
+  &__link--heart {
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: $dark-blue;
+      transition: fill .3s linear;
+    }
 
-  &__link--search::after {
-    @extend %background;
-    background-image: url('../images/icons/zoom-icon.svg');
-  }
+    &:hover svg {
+      fill: #fff;
+    }
 
-  &__link--heart::after {
-    left: -8px;
-    top: -8px;
-    background-image: url('../images/icons/heart-icon.svg');
-  }
-
-  &__link--cart::after {
-    top: -8px;
-    transform: translateX(-100%);
-    background-image: url('../images/icons/cart-icon.svg');
+    &:hover span {
+      transform: scale(1.3);
+      color: $accent;
+    }
   }
 
   &__span {
     position: absolute;
-    top: -8px;
+    top: 0;
+    right: 0;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -210,49 +267,56 @@
     color: $dark-title;
     background-color: #fff;
     z-index: 10;
-  }
-
-  &__link--heart span {
-    left: 11px;
-  }
-
-  &__link--cart span {
-    left: -7px;
+    transition: all .3s linear 0;
   }
 }
 
-/* Keyframes */
-
-@keyframes fill {
-  0% {
-    width: 0%;
-    height: 1px;
+.search {
+  @include tablet-portrait {
+    display: none;
   }
 
-  50% {
-    width: 100%;
-    height: 1px;
+  &__input {
+    position: absolute;
+    width: 0;
+    top: 0;
+    right: 0;
+    height: 50px;
+    font-size: 16px;
+    padding: 3px 35px 3px 15px;
+    @extend %DMSans-500;
+    border: none;
+    outline: transparent;
+    background: none;
+    background-color: #edf1f4;
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: background-color, width, .3s linear;
+
+    &:focus {
+      width: 200px;
+      cursor: text;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
   }
 
-  100% {
-    width: 100%;
-    height: 100%;
-    background: $blue-title;
-  }
-}
-
-@keyframes footer {
-  0% {
-    width: 0%;
-  }
-
-  50% {
-    width: 100%;
-  }
-
-  100% {
-    width: 100%;
-    background: $blue-title;
+  &__submit {
+    position: absolute;
+    top: 33%;
+    left: 35%;
+    width: 17px;
+    height: 17px;
+    font-size: 0;
+    background-image: url("../../images/icons/zoom-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity .4s ease;
   }
 }
 

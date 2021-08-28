@@ -3,20 +3,35 @@
   color: #7b7b7b;
 
   a {
-    color: #7b7b7b;
+    color: inherit;
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    padding: 80px 0;
+    flex-wrap: wrap;
+    padding: 100px 0;
     border-bottom: 1px solid #dae4e9;
+
+    @include phone {
+      padding: 20px 0;
+    }
+  }
+
+  &__item {
+    padding: 0 25px;
   }
   
   &__bottom {
     display: flex;
     justify-content: space-between;
     padding: 35px 0;
+
+    @include tablet-portrait {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
   }
 
   &__title {
@@ -28,10 +43,25 @@
 
   &__contacts {
     max-width: 190px;
+    font-style: normal;
+
+    @include phone {
+      max-width: none;
+      width: 100%;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
   }
 
   &__newsletter {
     max-width: 270px;
+
+    @include tablet-desktop {
+      margin-top: 20px;
+      max-width: 100%;
+      flex-grow: 1;
+      border-top: 1px solid #e0e0e0;
+    }
   }
 
   &__text {
@@ -58,6 +88,15 @@
     border: none;
     background-color: $light-accent;
 
+    @include tablet-desktop {
+      width: 100%;
+      max-width: 230px;
+    }
+
+    @include phone {
+      max-width: 150px;
+    }
+
     &::placeholder {
       font-size: 12px;
       color: #234969;
@@ -70,6 +109,12 @@
     color: #fff;
     border: none;
     background-color: #a3bbc8;
+    transition: background-color, color, .3s linear;
+
+    &:hover {
+      color: $blue-title;
+      background-color: $accent;
+    }
   }
 
   &__tel {
@@ -80,20 +125,29 @@
     cursor: inherit;
   }
 
+  &__copy {
+    @include tablet-portrait {
+      font-size: 13px;
+      order: 1;
+    }
+  }
+
   &__refs { 
     display: flex;
     justify-content: space-between;
+
+    @include tablet-portrait {
+      margin-bottom: 20px;
+    }
   }
 
-  &__roll {
-    &:not(:last-child) {
+  &__roll:not(:last-child) {
       padding-right: 15px;
       border-right: 1px solid #7b7b7b;
     }
 
-    &:not(:first-child) {
+  &__roll:not(:first-child) {
       padding-left: 15px;
-    }
   }
 
   &__tel,
@@ -101,41 +155,55 @@
   &__link,
   &__ref {
     position: relative;
-    transition: color 0.4s ease-out;
+    transition: color .3s ease-out;
   }
 
-  &__tel:hover,
-  &__email:hover,
-  &__link:hover,
-  &__ref:hover {
-    color: $dark-title;
+  &__tel,
+  &__email,
+  &__link,
+  &__ref {
+    &:hover {
+      color: $dark-title;
+    }
+  }
+    
+  &__tel,
+  &__email,
+  &__link,
+  &__ref {
+    &::after {
+      content: ".";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      color: transparent;
+      height: 1px;
+    } 
   }
 
-  &__tel:after,
-  &__email:after,
-  &__link:after,
-  &__ref:after {
-    content: ".";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    color: transparent;
-    height: 1px;
-  }
-
-  &__tel:hover:after,
-  &__email:hover:after,
-  &__link:hover:after,
-  &__ref:hover:after {
-    z-index: -10;
-    animation: footer 0.5s forwards;
-    opacity: 1;
+  &__tel,
+  &__email,
+  &__link,
+  &__ref { 
+    &:hover::after {
+      z-index: -10;
+      animation: footer .5s forwards;
+      opacity: 1;
+    }
   }
 
   &__part:not(:last-child),
   &__tel {
     margin-bottom: 20px;
+  }
+}
+
+.address__link {
+  transition: color .3s linear;
+
+  &:hover {
+    color: $dark-title;
   }
 }
 

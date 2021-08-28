@@ -1,17 +1,62 @@
+// main //
+
 @import 'reset';
+// @import 'libs';
 @import 'vars';
 @import 'fonts';
+@import 'keyframes';
 @import 'main';
+@import 'mixins';
 
+// common //
 
+@import 'banner';
+@import 'pagination';
 @import 'components/header';
-@import 'components/hero-screen';
-@import 'components/bestseller';
-@import 'components/new-design';
-
-
+@import 'components/sidebar';
 @import 'components/footer';
 
+// homepage //
 
+@import 'components/home/hero-screen';
+@import 'components/home/bestseller';
+@import 'components/home/new-design';
+@import 'components/home/video';
+@import 'components/home/insights';
 
-@import 'media';
+// about //
+
+@import 'components/about/experience';
+@import 'components/about/achievements';
+@import 'components/about/team';
+
+// login //
+
+@import 'components/login/form';
+@import 'components/login/partners';
+
+// terms&conditions //
+
+@import 'components/terms/terms';
+
+// contacts //
+
+@import 'components/contacts/contacts';
+
+// products-list //
+
+@import 'components/products-list/products-filter';
+@import 'components/products-list/products-list';
+
+// products-grid //
+
+@import 'components/product-grid/product-grid';
+
+// product-details //
+
+@import 'components/product-details/product-details';
+
+// blog //
+
+@import 'components/blog/blog';
+@import 'components/blog/blog-details';

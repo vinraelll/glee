@@ -6,6 +6,7 @@ $dark-title: #1a1a1a;
 $blue-title: #243f4d;
 $light-blue: #a3bbc8;
 $dark-blue: #436372;
+$banner: #edf1f4;
 
 
 %background {
@@ -14,6 +15,17 @@ $dark-blue: #436372;
   background-repeat: no-repeat;
 }
 
+%checkbox-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+%shadow {
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, .05);
+}
 
 // fonts 
 %alef-400 {
@@ -44,6 +56,11 @@ $dark-blue: #436372;
 %pragmatica-500 {
   font-family: 'PragmaticaC', sans-serif;
   font-weight: 500;
+}
+
+%rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
 }
 
 %rubik-400 {

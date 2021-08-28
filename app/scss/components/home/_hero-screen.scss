@@ -1,0 +1,301 @@
+.slider {
+  background-color: $accent;
+  background-position: 86% 55%;
+  background-repeat: no-repeat;
+  background-image: url('../../images/hero-bg.png');
+
+  @include big-desktop {
+    background-position: 80% 61%;
+    background-size: 553px 583px;
+  }
+
+  @include desktop-below {
+    background-position: 80% 53%;
+    background-size: 438px 457px;
+  }
+
+  @include tablet-desktop {
+    background-size: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 200px 0;
+
+    @include big-desktop {
+      justify-content: flex-start;
+      padding: 150px 30px;
+    }
+
+    @include desktop-below {
+      padding: 120px 30px;
+    }
+
+    @include tablet-landscape {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+  }
+
+  &__wrapper a {
+    outline: transparent;
+  }
+
+  &__inner {
+    max-width: 420px;
+
+    @include desktop-below {
+      max-width: 385px;
+    }
+
+    @include tablet-landscape {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    @include phone {
+      max-width: 370px;
+    }
+  }
+
+  &__descr {
+    outline: transparent;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @extend %rubik-500;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: $blue-title;
+
+    @include desktop-below {
+      margin-bottom: 20px;
+      font-size: 56px;
+    }
+
+    @include tablet-landscape {
+      margin-bottom: 40px;
+      font-size: 64px;
+      font-weight: 700;
+    }
+
+    @include phone {
+      margin-bottom: 30px;
+      font-size: 37px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 340px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: $dark-blue;
+    margin-bottom: 20px;
+
+    @include tablet-landscape {
+      margin: 0 auto 30px;
+    }
+
+    @include phone {
+      font-size: 16px;
+    }
+  }
+
+  &__image {
+    align-self: flex-end;
+
+    @include big-desktop {
+      max-width: 560px;
+    }
+
+    @include desktop-below {
+      max-width: 420px;
+    }
+
+    @include tablet-landscape {
+      align-self: center;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    max-width: 200px;
+    padding: 20px 25px;
+    @extend %rubik-500;
+    font-size: 15px;
+    color: #fff;
+    background-color: $light-blue;
+    transition: background-color .3s linear;
+
+    &:hover {
+      background-color: $dark-blue;
+    }
+
+    @include tablet-landscape {
+      width: 100%;
+      text-align: left;
+    }
+
+    @include phone-below {
+      max-width: 170px;
+      padding: 14px 18px;
+    }
+  }
+
+  &__link svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 9px;
+    fill: #fff;
+  }
+}
+
+ul.slick-dots {
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.slick-dots li:not(:last-child) {
+  margin-right: 12px;
+}
+
+.slick-dots button {
+  width: 30px;
+  height: 30px;
+  @extend %rubik-500;
+  font-size: 11px;
+  color: #667983;
+  border: none;
+  border-radius: 50%;
+  background-color: #fde3cc;
+  cursor: pointer;
+  transition: background-color, color, .4s ease-out;
+}
+
+.slick-active button,
+.slick-dots button:hover {
+  color: $blue-title;
+  background-color: #fff;
+}
+
+.advantages {
+  display: flex;
+
+  @include tablet-desktop {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding: 47px 0;
+    background-color: $light-accent;
+
+    @include desktop-below {
+      padding: 38px 0;
+    }
+
+    @include tablet-desktop {
+      align-items: center;
+      padding: 34px 30px;
+    }
+
+    @include phone-below {
+      padding: 30px 20px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    border-right: 1px solid #e8e4df;
+
+    @include tablet-desktop {
+      border-right: none;
+      border-bottom: 1px solid #e8e4df;
+    }
+  }
+
+  &__descr {
+    position: relative;
+    padding-left: 90px;
+    max-width: 290px;
+
+    @include desktop-below {
+      width: 400px;
+    }
+
+    @include tablet-desktop {
+      max-width: 100%;
+    }
+
+    @include phone {
+      padding-left: 69px;
+    }
+  }
+
+  &__descr::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 54px;
+    height: 54px;
+    @extend %background;
+    background-size: contain;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    @extend %DMSans-700;
+    font-size: 18px;
+
+    @include phone-below {
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    @extend %DMSans-400; 
+    line-height: 2;
+    color: #585858;
+
+    @include phone {
+      line-height: 1.5;
+    }
+
+    @include phone-below {
+      font-size: 14px;
+    }
+  }
+
+  &__descr--support::before {
+    background-image: url('../../images/icons/support-icon.png');
+  }
+  
+  &__descr--delivery::before {
+    background-image: url('../../images/icons/delivery-icon.png');
+  }
+  
+  &__descr--payment::before {
+    background-image: url('../../images/icons/payment-icon.png');
+  }
+}
+
+
+
+

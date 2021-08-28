@@ -4,28 +4,75 @@ body {
   line-height: 1.2;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .container {
   max-width: 1190px;
-  padding: 0px 10px;
-  margin: 0px auto;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .container--lg {
   max-width: 1790px;
 }
 
-.reset-btn {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  transition: color 0.4s ease-out;
-  cursor: pointer;
-}
-
 .title {
   max-width: max-content;
-  margin: 0px auto 40px;
+  margin: 0 auto 40px;
   @extend %DMSans-700;
   font-size: 36px;
   color: $dark-title;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.body-overlay {
+  background-color: rgba(0, 0, 0, .5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  transform: translateX(-100%);
+  transition: transform .3s linear;
+}
+
+.body-overlay.active {
+  transform: translateX(0%);
+}
+
+.scrollLock {
+  overflow: hidden;
+}
+
+.hidden-btn {
+  display: none !important;
+}
+
+.visible-btn {
+  display: block !important;
 }

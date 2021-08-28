@@ -1,0 +1,178 @@
+.products-list {
+  padding: 120px 0;
+
+  @include phone {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include desktop-below {
+      flex-direction: column;
+    }
+  }
+  
+  &__content {
+    max-width: 860px;
+    width: 100%;
+
+    @include tablet-portrait {
+      max-width: 600px;
+      margin: 0 auto; 
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    @include tablet-portrait {
+      flex-direction: column;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    max-width: 360px;
+    width: 100%;
+    margin-right: 60px;
+    background-color: #fefefe;
+    border: 2px solid #f2f2f2;
+    padding: 50px;
+
+    @include tablet-landscape {
+      margin-right: 20px;
+      padding: 30px;
+    }
+
+    @include tablet-portrait {
+      max-width: none;
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__ref {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    padding: 50px;
+
+    @include tablet-landscape {
+      padding: 30px;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__descr {
+    padding: 70px 0;
+
+    @include big-desktop {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #333;
+    transition: color .3s linear;
+
+    &:hover {
+      color: $accent;
+    }
+
+    @include tablet-landscape {
+      font-size: 30px;
+    }
+  }
+
+  &__rateYo {
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    font-size: 30px;
+    color: #333;
+
+    @include tablet-landscape {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    color: $blue-title;
+    line-height: 1.9;
+  }
+
+  &__price,
+  &__text {
+    margin-bottom: 30px;
+
+    @include tablet-landscape {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__wrap:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $light-blue;
+    background-color: #fff;
+    @extend %shadow;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      fill: $light-blue;
+      transition: fill .3s linear;
+    }
+
+    &:hover svg {
+      fill: #fff;
+    }
+
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+
+  &__btn--hidden {
+    display: none;
+    padding: 15px 55px;
+    text-transform: uppercase;
+    color: #fff;
+    @extend %shadow;
+    border-radius: 5px;
+    background-color: $light-blue;
+    transition: color, background-color, .3s linear;
+
+    &:hover {
+      background-color: $accent;
+      color: $blue-title;
+    }
+  }
+}
